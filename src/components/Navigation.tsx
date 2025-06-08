@@ -11,8 +11,12 @@ const Navigation = () => {
     <nav className="bg-white shadow-sm border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="text-2xl font-bold text-primary">
-            🍓 Strawberry Oasis
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/lovable-uploads/519fda63-5215-4c34-9109-8720650e36a9.png" 
+              alt="Strawberry Oasis Logo" 
+              className="h-12 w-auto"
+            />
           </Link>
           
           {/* Desktop Navigation */}
