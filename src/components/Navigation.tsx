@@ -13,7 +13,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/519fda63-5215-4c34-9109-8720650e36a9.png" 
+              src="/lovable-uploads/9937b735-6e84-4902-9b1a-9ce2cb363f4f.png" 
               alt="Strawberry Oasis Logo" 
               className="h-12 w-auto"
             />
