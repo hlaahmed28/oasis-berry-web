@@ -23,12 +23,12 @@ const AboutPreview = () => {
               <Link to="/about">Learn More About Us</Link>
             </Button>
           </div>
-          <div className="bg-gradient-to-br from-green-100 to-red-100 rounded-lg p-8 text-center">
-            <div className="text-6xl mb-4">🌱</div>
-            <h3 className="text-xl font-semibold text-foreground mb-2">Sustainable Excellence</h3>
-            <p className="text-muted-foreground">
-              Modern agricultural practices meeting environmental responsibility
-            </p>
+          <div className="relative">
+            <img 
+              src="/lovable-uploads/b78afc77-ad03-4daf-b9b6-e1ba51bf4bd1.png" 
+              alt="Fresh strawberries from our farm"
+              className="rounded-lg shadow-lg w-full h-auto"
+            />
           </div>
         </div>
       </div>

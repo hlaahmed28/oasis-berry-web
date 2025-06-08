@@ -23,7 +23,11 @@ const Products = () => {
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <Card className="border-2 border-red-200 hover:border-red-300 transition-colors">
               <CardHeader className="text-center">
-                <div className="text-6xl mb-4">🍓</div>
+                <img 
+                  src="/lovable-uploads/2b93bb6b-fa2f-4a29-92ec-ad1bbff0a3c7.png" 
+                  alt="Festival Strawberries"
+                  className="w-full h-48 object-cover rounded-lg mb-4"
+                />
                 <CardTitle className="text-2xl text-red-600">Festival Strawberries</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -51,7 +55,11 @@ const Products = () => {
             
             <Card className="border-2 border-orange-200 hover:border-orange-300 transition-colors">
               <CardHeader className="text-center">
-                <div className="text-6xl mb-4">🌟</div>
+                <img 
+                  src="/lovable-uploads/8f863c6a-b4be-4a59-91dd-0a77ab4a3c72.png" 
+                  alt="Florida Beauty Strawberries"
+                  className="w-full h-48 object-cover rounded-lg mb-4"
+                />
                 <CardTitle className="text-2xl text-orange-600">Florida Beauty</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -86,9 +94,13 @@ const Products = () => {
               Available in multiple sizes and formats designed to meet the needs of global retailers and distributors.
             </p>
             
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-white p-6 rounded-lg shadow-sm border text-center">
-                <div className="text-3xl mb-3">📦</div>
+                <img 
+                  src="/lovable-uploads/457fdda8-01b9-466a-a1c8-b9b54c4eb57e.png" 
+                  alt="Strawberry packaging"
+                  className="w-full h-32 object-cover rounded-lg mb-3"
+                />
                 <h3 className="font-semibold text-foreground mb-2">Clamshells</h3>
                 <p className="text-muted-foreground">
                   Consumer-ready packaging in various sizes for retail markets
@@ -96,7 +108,11 @@ const Products = () => {
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-sm border text-center">
-                <div className="text-3xl mb-3">📋</div>
+                <img 
+                  src="/lovable-uploads/20c84e7e-3c03-467f-9c8e-69f2c91b4c74.png" 
+                  alt="Export cartons"
+                  className="w-full h-32 object-cover rounded-lg mb-3"
+                />
                 <h3 className="font-semibold text-foreground mb-2">Cartons</h3>
                 <p className="text-muted-foreground">
                   Export cartons designed for maximum protection during transport
@@ -104,7 +120,11 @@ const Products = () => {
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-sm border text-center">
-                <div className="text-3xl mb-3">🚚</div>
+                <img 
+                  src="/lovable-uploads/c3f86e40-5c85-46f5-a5d0-ed58ad3c19d8.png" 
+                  alt="Bulk crates"
+                  className="w-full h-32 object-cover rounded-lg mb-3"
+                />
                 <h3 className="font-semibold text-foreground mb-2">Bulk Crates</h3>
                 <p className="text-muted-foreground">
                   Large volume packaging for wholesale and processing markets

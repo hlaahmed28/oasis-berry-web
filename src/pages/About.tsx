@@ -14,6 +14,14 @@ const About = () => {
               A Legacy Rooted in Quality
             </h1>
             
+            <div className="mb-12">
+              <img 
+                src="/lovable-uploads/9ddb10db-7a75-46d3-9001-c2b5ebbb9b84.png" 
+                alt="Our strawberry farm"
+                className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
+              />
+            </div>
+            
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
               <p className="text-xl leading-relaxed">
                 At Strawberry Oasis, we've been cultivating premium strawberries for years, building 
