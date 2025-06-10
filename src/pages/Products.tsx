@@ -93,6 +93,34 @@ const Products = () => {
               </CardContent>
             </Card>
           </div>
+
+          {/* Certificate Section */}
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-8 mb-16">
+            <h2 className="text-3xl font-bold text-foreground mb-6 text-center">
+              Quality Certification
+            </h2>
+            <p className="text-lg text-muted-foreground text-center mb-8 max-w-2xl mx-auto">
+              Our strawberries undergo rigorous testing by the Egyptian Ministry of Agriculture to ensure 
+              they meet international safety and quality standards.
+            </p>
+            
+            <div className="flex justify-center">
+              <div className="max-w-md">
+                <img 
+                  src="/lovable-uploads/18c523bf-d46c-47a8-99fe-2e5264f91ae6.png" 
+                  alt="Test Certificate from Ministry of Agriculture"
+                  className="w-full h-auto rounded-lg shadow-lg border"
+                  onError={(e) => {
+                    console.log('Certificate image failed to load');
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+                <p className="text-center text-sm text-muted-foreground mt-4">
+                  Official Test Certificate from Egyptian Ministry of Agriculture
+                </p>
+              </div>
+            </div>
+          </div>
           
           <div className="bg-gray-50 rounded-lg p-8">
             <h2 className="text-3xl font-bold text-foreground mb-6 text-center">

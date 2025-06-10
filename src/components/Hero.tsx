@@ -1,54 +1,54 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
+import useEmblaCarousel from 'embla-carousel-react';
 
 const Hero = () => {
-  const [api, setApi] = useState<any>();
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   
   const bannerImages = [
     "/lovable-uploads/4fd05db0-df8c-4f3d-a995-035533f5c47b.png",
-    "/lovable-uploads/bf25374c-4ce7-4f81-b6fb-a50a53ff3bb0.png",
+    "/lovable-uploads/bf25374c-4ce7-4f81-b6fb-a50a53ff3bb0.png", 
     "/lovable-uploads/ebbd049e-f09e-4e09-8516-c049141a9d6d.png",
-    "/lovable-uploads/58b3affa-8eca-4f3f-aa4d-2e667b1be6ad.png"
+    "/lovable-uploads/58b3affa-8eca-4f3f-aa4d-2e667b1be6ad.png",
+    "/lovable-uploads/a9f9fa22-07e2-4305-bc8e-9af9cdccd5a0.png"
   ];
 
   useEffect(() => {
-    if (!api) return;
+    if (emblaApi) {
+      const intervalId = setInterval(() => {
+        emblaApi.scrollNext();
+      }, 4000);
 
-    const intervalId = setInterval(() => {
-      api.scrollNext();
-    }, 4000); // Change image every 4 seconds
-
-    return () => clearInterval(intervalId);
-  }, [api]);
+      return () => clearInterval(intervalId);
+    }
+  }, [emblaApi]);
 
   return (
-    <section className="relative bg-gradient-to-r from-green-50 to-red-50 py-20 px-4">
-      <div className="absolute inset-0 bg-black/20"></div>
-      <Carousel 
-        className="absolute inset-0"
-        setApi={setApi}
-        opts={{
-          align: "start",
-          loop: true,
-        }}
-      >
-        <CarouselContent>
+    <section className="relative bg-gradient-to-r from-green-50 to-red-50 py-20 px-4 h-screen">
+      <div className="absolute inset-0 bg-black/30"></div>
+      
+      <div className="absolute inset-0" ref={emblaRef}>
+        <div className="flex h-full">
           {bannerImages.map((image, index) => (
-            <CarouselItem key={index}>
+            <div 
+              key={index}
+              className="flex-[0_0_100%] min-w-0"
+            >
               <div 
                 className="w-full h-full bg-cover bg-center"
                 style={{
                   backgroundImage: `url('${image}')`
                 }}
               ></div>
-            </CarouselItem>
+            </div>
           ))}
-        </CarouselContent>
-      </Carousel>
-      <div className="relative container mx-auto text-center">
+        </div>
+      </div>
+
+      <div className="relative container mx-auto text-center flex flex-col justify-center h-full">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
           Premium Egyptian Strawberries
         </h1>
@@ -65,7 +65,7 @@ const Hero = () => {
           <Button asChild size="lg" className="bg-red-600 hover:bg-red-700 text-white">
             <Link to="/farm">Explore Our Farm</Link>
           </Button>
-          <Button asChild size="lg" className="bg-red-600 hover:bg-red-700 text-white border-white">
+          <Button asChild size="lg" className="bg-red-600 hover:bg-red-700 text-white">
             <Link to="/export">View Export Options</Link>
           </Button>
         </div>
