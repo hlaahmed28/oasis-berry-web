@@ -9,7 +9,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/lovable-uploads/6a3b36b0-8c56-41d1-9e84-0bb44c9e5a04.png')"
+          backgroundImage: "url('/lovable-uploads/4fd05db0-df8c-4f3d-a995-035533f5c47b.png')"
         }}
       ></div>
       <div className="relative container mx-auto text-center">
@@ -27,10 +27,10 @@ const Hero = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button asChild size="lg" className="bg-red-600 hover:bg-red-700 text-white">
-            <Link to="/farm">🌍 Explore Our Farm</Link>
+            <Link to="/farm">Explore Our Farm</Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-red-600">
-            <Link to="/export">📦 View Export Options</Link>
+            <Link to="/export">View Export Options</Link>
           </Button>
         </div>
       </div>

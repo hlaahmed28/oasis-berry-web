@@ -16,7 +16,7 @@ const Farm = () => {
             
             <div className="mb-12">
               <img 
-                src="/lovable-uploads/9ddb10db-7a75-46d3-9e84-0bb44c9e5a04.png" 
+                src="/lovable-uploads/4fd05db0-df8c-4f3d-a995-035533f5c47b.png" 
                 alt="Our strawberry farm"
                 className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
               />
@@ -31,15 +31,25 @@ const Farm = () => {
               
               <div className="grid md:grid-cols-2 gap-8 my-12">
                 <div className="bg-white p-6 rounded-lg shadow-sm border">
-                  <h3 className="text-xl font-semibold text-foreground mb-3">🚿 Drip Irrigation Systems</h3>
+                  <img 
+                    src="/lovable-uploads/a9f9fa22-07e2-4305-bc8e-9af9cdccd5a0.png" 
+                    alt="Farm workers in the field"
+                    className="w-full h-32 object-cover rounded-lg mb-4"
+                  />
+                  <h3 className="text-xl font-semibold text-foreground mb-3">Expert Care</h3>
                   <p>
-                    Efficient water usage through precision irrigation technology that delivers water 
-                    directly to plant roots, minimizing waste and maximizing growth.
+                    Our skilled farmers and agronomists ensure each crop receives expert care — 
+                    from planting to harvest, guaranteeing premium quality.
                   </p>
                 </div>
                 
                 <div className="bg-white p-6 rounded-lg shadow-sm border">
-                  <h3 className="text-xl font-semibold text-foreground mb-3">🌿 Organic Fertilizers</h3>
+                  <img 
+                    src="/lovable-uploads/bf25374c-4ce7-4f81-b6fb-a50a53ff3bb0.png" 
+                    alt="Strawberry plants with flowers"
+                    className="w-full h-32 object-cover rounded-lg mb-4"
+                  />
+                  <h3 className="text-xl font-semibold text-foreground mb-3">Organic Fertilizers</h3>
                   <p>
                     We use only safe, organic fertilizers and pesticides that protect both our crops 
                     and the environment while ensuring the best possible flavor.
@@ -47,18 +57,28 @@ const Farm = () => {
                 </div>
                 
                 <div className="bg-white p-6 rounded-lg shadow-sm border">
-                  <h3 className="text-xl font-semibold text-foreground mb-3">🌡️ Climate Monitoring</h3>
+                  <img 
+                    src="/lovable-uploads/58b3affa-8eca-4f3f-aa4d-2e667b1be6ad.png" 
+                    alt="Quality control and packaging"
+                    className="w-full h-32 object-cover rounded-lg mb-4"
+                  />
+                  <h3 className="text-xl font-semibold text-foreground mb-3">Quality Control</h3>
                   <p>
-                    Advanced climate monitoring systems ensure optimal growth conditions, tracking 
-                    temperature, humidity, and soil conditions in real-time.
+                    Advanced quality monitoring systems ensure optimal conditions, tracking 
+                    every step from harvest to packaging with rigorous standards.
                   </p>
                 </div>
                 
                 <div className="bg-white p-6 rounded-lg shadow-sm border">
-                  <h3 className="text-xl font-semibold text-foreground mb-3">👨‍🌾 Expert Care</h3>
+                  <img 
+                    src="/lovable-uploads/ebbd049e-f09e-4e09-8516-c049141a9d6d.png" 
+                    alt="Quality certification"
+                    className="w-full h-32 object-cover rounded-lg mb-4"
+                  />
+                  <h3 className="text-xl font-semibold text-foreground mb-3">Certified Quality</h3>
                   <p>
-                    Our skilled farmers and agronomists ensure each crop receives expert care — 
-                    from planting to harvest, guaranteeing premium quality.
+                    Our strawberries meet international quality standards with full certification 
+                    and testing to ensure safety and excellence in every shipment.
                   </p>
                 </div>
               </div>

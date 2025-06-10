@@ -24,7 +24,7 @@ const Products = () => {
             <Card className="border-2 border-red-200 hover:border-red-300 transition-colors">
               <CardHeader className="text-center">
                 <img 
-                  src="/lovable-uploads/2b93bb6b-fa2f-4a29-92ec-ad1bbff0a3c7.png" 
+                  src="/lovable-uploads/7aef6103-35b8-4ccc-9b25-76fb913bc1a1.png" 
                   alt="Festival Strawberries"
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
@@ -56,7 +56,7 @@ const Products = () => {
             <Card className="border-2 border-orange-200 hover:border-orange-300 transition-colors">
               <CardHeader className="text-center">
                 <img 
-                  src="/lovable-uploads/8f863c6a-b4be-4a59-91dd-0a77ab4a3c72.png" 
+                  src="/lovable-uploads/7aef6103-35b8-4ccc-9b25-76fb913bc1a1.png" 
                   alt="Florida Beauty Strawberries"
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
@@ -97,8 +97,8 @@ const Products = () => {
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-white p-6 rounded-lg shadow-sm border text-center">
                 <img 
-                  src="/lovable-uploads/457fdda8-01b9-466a-a1c8-b9b54c4eb57e.png" 
-                  alt="Strawberry packaging"
+                  src="/lovable-uploads/ccf9b2c4-8548-4511-8df0-08506e0c50ed.png" 
+                  alt="Strawberry packaging clamshells"
                   className="w-full h-32 object-cover rounded-lg mb-3"
                 />
                 <h3 className="font-semibold text-foreground mb-2">Clamshells</h3>
@@ -109,11 +109,11 @@ const Products = () => {
               
               <div className="bg-white p-6 rounded-lg shadow-sm border text-center">
                 <img 
-                  src="/lovable-uploads/20c84e7e-3c03-467f-9c8e-69f2c91b4c74.png" 
+                  src="/lovable-uploads/1d6c3ca3-7ad4-4a53-899c-4ec4e9dbe9a8.png" 
                   alt="Export cartons"
                   className="w-full h-32 object-cover rounded-lg mb-3"
                 />
-                <h3 className="font-semibold text-foreground mb-2">Cartons</h3>
+                <h3 className="font-semibold text-foreground mb-2">Export Cartons</h3>
                 <p className="text-muted-foreground">
                   Export cartons designed for maximum protection during transport
                 </p>
@@ -121,13 +121,13 @@ const Products = () => {
               
               <div className="bg-white p-6 rounded-lg shadow-sm border text-center">
                 <img 
-                  src="/lovable-uploads/c3f86e40-5c85-46f5-a5d0-ed58ad3c19d8.png" 
-                  alt="Bulk crates"
+                  src="/lovable-uploads/0a99a92e-537b-4857-a681-2fa627083306.png" 
+                  alt="Premium packaging"
                   className="w-full h-32 object-cover rounded-lg mb-3"
                 />
-                <h3 className="font-semibold text-foreground mb-2">Bulk Crates</h3>
+                <h3 className="font-semibold text-foreground mb-2">Premium Packaging</h3>
                 <p className="text-muted-foreground">
-                  Large volume packaging for wholesale and processing markets
+                  Special presentation packaging for premium markets
                 </p>
               </div>
             </div>

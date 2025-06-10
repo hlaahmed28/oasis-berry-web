@@ -20,7 +20,11 @@ const ProductsPreview = () => {
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <Card className="border-2 hover:border-red-200 transition-colors">
             <CardHeader>
-              <div className="text-4xl mb-2">🍓</div>
+              <img 
+                src="/lovable-uploads/7aef6103-35b8-4ccc-9b25-76fb913bc1a1.png" 
+                alt="Festival Strawberries"
+                className="w-full h-32 object-cover rounded-lg mb-4"
+              />
               <CardTitle className="text-red-600">Festival Strawberries</CardTitle>
             </CardHeader>
             <CardContent>
@@ -33,7 +37,11 @@ const ProductsPreview = () => {
           
           <Card className="border-2 hover:border-red-200 transition-colors">
             <CardHeader>
-              <div className="text-4xl mb-2">🌟</div>
+              <img 
+                src="/lovable-uploads/7aef6103-35b8-4ccc-9b25-76fb913bc1a1.png" 
+                alt="Florida Beauty Strawberries"
+                className="w-full h-32 object-cover rounded-lg mb-4"
+              />
               <CardTitle className="text-red-600">Florida Beauty</CardTitle>
             </CardHeader>
             <CardContent>

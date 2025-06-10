@@ -16,6 +16,14 @@ const Export = () => {
               Exporting Egyptian Excellence Worldwide
             </h1>
             
+            <div className="mb-12">
+              <img 
+                src="/lovable-uploads/276ce224-c924-49b2-b6bb-4b3b332bb863.png" 
+                alt="Export ready strawberry packaging"
+                className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
+              />
+            </div>
+            
             <p className="text-xl leading-relaxed text-center mb-12 text-muted-foreground">
               Looking to import high-quality Egyptian strawberries? We export to Europe, the Middle East, 
               Asia, and beyond with flexible logistics solutions and premium packaging options.
@@ -23,7 +31,7 @@ const Export = () => {
             
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="bg-white p-6 rounded-lg shadow-sm border">
-                <h3 className="text-xl font-semibold text-foreground mb-4">📅 Export Seasons</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-4">Export Seasons</h3>
                 <p className="mb-2"><strong>Main Season:</strong> November to May</p>
                 <p className="text-muted-foreground">
                   Our peak harvest season ensures consistent supply and optimal quality 
@@ -32,7 +40,7 @@ const Export = () => {
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-sm border">
-                <h3 className="text-xl font-semibold text-foreground mb-4">📦 Packaging Options</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-4">Packaging Options</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>• Clamshells (250g, 500g)</li>
                   <li>• Export cartons (2kg, 5kg)</li>
@@ -42,7 +50,7 @@ const Export = () => {
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-sm border">
-                <h3 className="text-xl font-semibold text-foreground mb-4">🚛 Logistics Solutions</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-4">Logistics Solutions</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>• Cold chain logistics maintained</li>
                   <li>• Air freight for premium delivery</li>
@@ -52,7 +60,7 @@ const Export = () => {
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-sm border">
-                <h3 className="text-xl font-semibold text-foreground mb-4">📏 Minimum Orders</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-4">Minimum Orders</h3>
                 <p className="mb-2"><strong>Flexible quantities for bulk orders</strong></p>
                 <p className="text-muted-foreground">
                   We accommodate various order sizes to meet the needs of different 
@@ -68,7 +76,7 @@ const Export = () => {
                 and custom packaging solutions tailored to your market needs.
               </p>
               <Button asChild size="lg" className="bg-red-600 hover:bg-red-700">
-                <Link to="/contact">📩 Contact Us for a Quote</Link>
+                <Link to="/contact">Contact Us for a Quote</Link>
               </Button>
             </div>
             
