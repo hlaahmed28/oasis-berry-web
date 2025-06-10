@@ -16,6 +16,13 @@ const Navigation = () => {
               src="/lovable-uploads/9937b735-6e84-4902-9b1a-9ce2cb363f4f.png" 
               alt="Strawberry Oasis Logo" 
               className="h-12 w-auto"
+              onError={(e) => {
+                console.log('Logo failed to load:', e);
+                console.log('Attempted to load:', e.currentTarget.src);
+              }}
+              onLoad={() => {
+                console.log('Logo loaded successfully');
+              }}
             />
           </Link>
           
