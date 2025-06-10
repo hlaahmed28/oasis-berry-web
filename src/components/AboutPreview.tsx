@@ -25,9 +25,13 @@ const AboutPreview = () => {
           </div>
           <div className="relative">
             <img 
-              src="/lovable-uploads/b78afc77-ad03-4daf-b9b6-e1ba51bf4bd1.png" 
+              src="/lovable-uploads/adfdf2fb-5b20-4bce-af35-2651768c9a60.png" 
               alt="Fresh strawberries from our farm"
               className="rounded-lg shadow-lg w-full h-auto"
+              onError={(e) => {
+                console.log('AboutPreview image failed to load');
+                e.currentTarget.style.display = 'none';
+              }}
             />
           </div>
         </div>

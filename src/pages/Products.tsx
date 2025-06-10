@@ -60,7 +60,7 @@ const Products = () => {
             <Card className="border-2 border-orange-200 hover:border-orange-300 transition-colors">
               <CardHeader className="text-center">
                 <img 
-                  src="/lovable-uploads/ebbd049e-f09e-4e09-8516-c049141a9d6d.png" 
+                  src="/lovable-uploads/421700b1-f980-46d0-9122-e2acfe70bc4f.png" 
                   alt="Florida Beauty Strawberries"
                   className="w-full h-48 object-cover rounded-lg mb-4"
                   onError={(e) => {
@@ -133,7 +133,7 @@ const Products = () => {
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-white p-6 rounded-lg shadow-sm border text-center">
                 <img 
-                  src="/lovable-uploads/ccf9b2c4-8548-4511-8df0-08506e0c50ed.png" 
+                  src="/lovable-uploads/26be9eea-2d56-46da-acf7-71ed755ae9e8.png" 
                   alt="Strawberry packaging clamshells"
                   className="w-full h-32 object-cover rounded-lg mb-3"
                   onError={(e) => {

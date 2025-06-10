@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
@@ -16,9 +15,13 @@ const About = () => {
             
             <div className="mb-12">
               <img 
-                src="/lovable-uploads/9ddb10db-7a75-46d3-9001-c2b5ebbb9b84.png" 
-                alt="Our strawberry farm"
+                src="/lovable-uploads/adfdf2fb-5b20-4bce-af35-2651768c9a60.png" 
+                alt="Fresh strawberries from our farm"
                 className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
+                onError={(e) => {
+                  console.log('About page hero image failed to load');
+                  e.currentTarget.style.display = 'none';
+                }}
               />
             </div>
             

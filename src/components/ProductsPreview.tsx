@@ -42,7 +42,7 @@ const ProductsPreview = () => {
           <Card className="border-2 hover:border-red-200 transition-colors">
             <CardHeader>
               <img 
-                src="/lovable-uploads/ebbd049e-f09e-4e09-8516-c049141a9d6d.png" 
+                src="/lovable-uploads/421700b1-f980-46d0-9122-e2acfe70bc4f.png" 
                 alt="Florida Beauty Strawberries"
                 className="w-full h-32 object-cover rounded-lg mb-4"
                 onError={(e) => {
