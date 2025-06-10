@@ -21,9 +21,13 @@ const ProductsPreview = () => {
           <Card className="border-2 hover:border-red-200 transition-colors">
             <CardHeader>
               <img 
-                src="/lovable-uploads/7aef6103-35b8-4ccc-9b25-76fb913bc1a1.png" 
+                src="/lovable-uploads/bf25374c-4ce7-4f81-b6fb-a50a53ff3bb0.png" 
                 alt="Festival Strawberries"
                 className="w-full h-32 object-cover rounded-lg mb-4"
+                onError={(e) => {
+                  console.log('Festival strawberries image failed to load');
+                  e.currentTarget.style.display = 'none';
+                }}
               />
               <CardTitle className="text-red-600">Festival Strawberries</CardTitle>
             </CardHeader>
@@ -38,9 +42,13 @@ const ProductsPreview = () => {
           <Card className="border-2 hover:border-red-200 transition-colors">
             <CardHeader>
               <img 
-                src="/lovable-uploads/7aef6103-35b8-4ccc-9b25-76fb913bc1a1.png" 
+                src="/lovable-uploads/ebbd049e-f09e-4e09-8516-c049141a9d6d.png" 
                 alt="Florida Beauty Strawberries"
                 className="w-full h-32 object-cover rounded-lg mb-4"
+                onError={(e) => {
+                  console.log('Florida Beauty strawberries image failed to load');
+                  e.currentTarget.style.display = 'none';
+                }}
               />
               <CardTitle className="text-red-600">Florida Beauty</CardTitle>
             </CardHeader>

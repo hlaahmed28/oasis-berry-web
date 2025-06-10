@@ -24,9 +24,13 @@ const Products = () => {
             <Card className="border-2 border-red-200 hover:border-red-300 transition-colors">
               <CardHeader className="text-center">
                 <img 
-                  src="/lovable-uploads/7aef6103-35b8-4ccc-9b25-76fb913bc1a1.png" 
+                  src="/lovable-uploads/bf25374c-4ce7-4f81-b6fb-a50a53ff3bb0.png" 
                   alt="Festival Strawberries"
                   className="w-full h-48 object-cover rounded-lg mb-4"
+                  onError={(e) => {
+                    console.log('Festival strawberries image failed to load');
+                    e.currentTarget.style.display = 'none';
+                  }}
                 />
                 <CardTitle className="text-2xl text-red-600">Festival Strawberries</CardTitle>
               </CardHeader>
@@ -56,9 +60,13 @@ const Products = () => {
             <Card className="border-2 border-orange-200 hover:border-orange-300 transition-colors">
               <CardHeader className="text-center">
                 <img 
-                  src="/lovable-uploads/7aef6103-35b8-4ccc-9b25-76fb913bc1a1.png" 
+                  src="/lovable-uploads/ebbd049e-f09e-4e09-8516-c049141a9d6d.png" 
                   alt="Florida Beauty Strawberries"
                   className="w-full h-48 object-cover rounded-lg mb-4"
+                  onError={(e) => {
+                    console.log('Florida Beauty strawberries image failed to load');
+                    e.currentTarget.style.display = 'none';
+                  }}
                 />
                 <CardTitle className="text-2xl text-orange-600">Florida Beauty</CardTitle>
               </CardHeader>
@@ -100,6 +108,10 @@ const Products = () => {
                   src="/lovable-uploads/ccf9b2c4-8548-4511-8df0-08506e0c50ed.png" 
                   alt="Strawberry packaging clamshells"
                   className="w-full h-32 object-cover rounded-lg mb-3"
+                  onError={(e) => {
+                    console.log('Clamshells image failed to load');
+                    e.currentTarget.style.display = 'none';
+                  }}
                 />
                 <h3 className="font-semibold text-foreground mb-2">Clamshells</h3>
                 <p className="text-muted-foreground">
@@ -112,6 +124,10 @@ const Products = () => {
                   src="/lovable-uploads/1d6c3ca3-7ad4-4a53-899c-4ec4e9dbe9a8.png" 
                   alt="Export cartons"
                   className="w-full h-32 object-cover rounded-lg mb-3"
+                  onError={(e) => {
+                    console.log('Export cartons image failed to load');
+                    e.currentTarget.style.display = 'none';
+                  }}
                 />
                 <h3 className="font-semibold text-foreground mb-2">Export Cartons</h3>
                 <p className="text-muted-foreground">
@@ -124,6 +140,10 @@ const Products = () => {
                   src="/lovable-uploads/0a99a92e-537b-4857-a681-2fa627083306.png" 
                   alt="Premium packaging"
                   className="w-full h-32 object-cover rounded-lg mb-3"
+                  onError={(e) => {
+                    console.log('Premium packaging image failed to load');
+                    e.currentTarget.style.display = 'none';
+                  }}
                 />
                 <h3 className="font-semibold text-foreground mb-2">Premium Packaging</h3>
                 <p className="text-muted-foreground">

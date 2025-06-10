@@ -1,17 +1,53 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [api, setApi] = useState<any>();
+  
+  const bannerImages = [
+    "/lovable-uploads/4fd05db0-df8c-4f3d-a995-035533f5c47b.png",
+    "/lovable-uploads/bf25374c-4ce7-4f81-b6fb-a50a53ff3bb0.png",
+    "/lovable-uploads/ebbd049e-f09e-4e09-8516-c049141a9d6d.png",
+    "/lovable-uploads/58b3affa-8eca-4f3f-aa4d-2e667b1be6ad.png"
+  ];
+
+  useEffect(() => {
+    if (!api) return;
+
+    const intervalId = setInterval(() => {
+      api.scrollNext();
+    }, 4000); // Change image every 4 seconds
+
+    return () => clearInterval(intervalId);
+  }, [api]);
+
   return (
     <section className="relative bg-gradient-to-r from-green-50 to-red-50 py-20 px-4">
       <div className="absolute inset-0 bg-black/20"></div>
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/lovable-uploads/4fd05db0-df8c-4f3d-a995-035533f5c47b.png')"
+      <Carousel 
+        className="absolute inset-0"
+        setApi={setApi}
+        opts={{
+          align: "start",
+          loop: true,
         }}
-      ></div>
+      >
+        <CarouselContent>
+          {bannerImages.map((image, index) => (
+            <CarouselItem key={index}>
+              <div 
+                className="w-full h-full bg-cover bg-center"
+                style={{
+                  backgroundImage: `url('${image}')`
+                }}
+              ></div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
       <div className="relative container mx-auto text-center">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
           Premium Egyptian Strawberries
@@ -29,7 +65,7 @@ const Hero = () => {
           <Button asChild size="lg" className="bg-red-600 hover:bg-red-700 text-white">
             <Link to="/farm">Explore Our Farm</Link>
           </Button>
-          <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-red-600">
+          <Button asChild size="lg" className="bg-red-600 hover:bg-red-700 text-white border-white">
             <Link to="/export">View Export Options</Link>
           </Button>
         </div>
