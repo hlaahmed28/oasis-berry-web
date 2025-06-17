@@ -7,10 +7,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { submitContactForm, ContactFormData } from "@/services/contactService";
 
 const Contact = () => {
   const { toast } = useToast();
-  const [formData, setFormData] = useState({
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
     company: "",
@@ -18,20 +20,38 @@ const Contact = () => {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    toast({
-      title: "Message sent successfully!",
-      description: "We'll get back to you within 24 hours.",
-    });
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      country: "",
-      message: ""
-    });
+    setIsSubmitting(true);
+    
+    try {
+      const result = await submitContactForm(formData);
+      
+      if (result.success) {
+        toast({
+          title: "Message sent successfully!",
+          description: result.message,
+        });
+        
+        // Clear form after successful submission
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          country: "",
+          message: ""
+        });
+      }
+    } catch (error) {
+      console.error("Error submitting contact form:", error);
+      toast({
+        title: "Error sending message",
+        description: "Please try again or contact us directly at ahmedelafifi@strawberryoasis.com",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -72,6 +92,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     className="mt-1"
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -85,6 +106,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     className="mt-1"
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -97,6 +119,7 @@ const Contact = () => {
                     value={formData.company}
                     onChange={handleChange}
                     className="mt-1"
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -109,6 +132,7 @@ const Contact = () => {
                     value={formData.country}
                     onChange={handleChange}
                     className="mt-1"
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -122,13 +146,27 @@ const Contact = () => {
                     onChange={handleChange}
                     className="mt-1 min-h-[120px]"
                     placeholder="Tell us about your requirements, quantities, and timeline..."
+                    disabled={isSubmitting}
                   />
                 </div>
                 
-                <Button type="submit" size="lg" className="w-full bg-red-600 hover:bg-red-700">
-                  Send Message
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  className="w-full bg-red-600 hover:bg-red-700"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
+              
+              <div className="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+                <h3 className="text-sm font-semibold text-blue-800 mb-2">📧 Form Submissions</h3>
+                <p className="text-blue-700 text-sm">
+                  Currently form submissions are logged for testing. To receive actual emails, 
+                  connect your project to Supabase using the green button in the top right.
+                </p>
+              </div>
             </div>
             
             <div>
