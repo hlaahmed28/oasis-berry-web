@@ -46,9 +46,15 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Contact Info</h4>
             <div className="space-y-2 text-gray-400">
-              <p>📞 +20 XXX XXX XXXX</p>
-              <p>📧 info@strawberryoasis.com</p>
-              <p>📍 Egypt</p>
+              <div>
+                <p>📞 +20 155 483 3334</p>
+                <p>📞 +20 100 388 7243</p>
+              </div>
+              <div>
+                <p>📧 ahmedelafifi@strawberryoasis.com</p>
+                <p>📧 Mohamed.fahmy@strawberryoasis.com</p>
+              </div>
+              <p>📍 <a href="https://maps.app.goo.gl/b5RoWeXWRueUGMrV8" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">View Location</a></p>
             </div>
           </div>
         </div>

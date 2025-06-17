@@ -138,17 +138,23 @@ const Contact = () => {
                 <div className="bg-white p-6 rounded-lg shadow-sm border">
                   <div className="flex items-center mb-3">
                     <span className="text-2xl mr-3">📞</span>
-                    <h3 className="text-lg font-semibold text-foreground">Phone</h3>
+                    <h3 className="text-lg font-semibold text-foreground">Phone Numbers</h3>
                   </div>
-                  <p className="text-muted-foreground">+20 XXX XXX XXXX</p>
+                  <div className="text-muted-foreground space-y-1">
+                    <p>Ahmed El Afifi: +20 155 483 3334</p>
+                    <p>Mohamed Fahmy: +20 100 388 7243</p>
+                  </div>
                 </div>
                 
                 <div className="bg-white p-6 rounded-lg shadow-sm border">
                   <div className="flex items-center mb-3">
                     <span className="text-2xl mr-3">📧</span>
-                    <h3 className="text-lg font-semibold text-foreground">Email</h3>
+                    <h3 className="text-lg font-semibold text-foreground">Email Addresses</h3>
                   </div>
-                  <p className="text-muted-foreground">info@strawberryoasis.com</p>
+                  <div className="text-muted-foreground space-y-1">
+                    <p>ahmedelafifi@strawberryoasis.com</p>
+                    <p>Mohamed.fahmy@strawberryoasis.com</p>
+                  </div>
                 </div>
                 
                 <div className="bg-white p-6 rounded-lg shadow-sm border">
@@ -156,10 +162,17 @@ const Contact = () => {
                     <span className="text-2xl mr-3">📍</span>
                     <h3 className="text-lg font-semibold text-foreground">Location</h3>
                   </div>
-                  <p className="text-muted-foreground">
-                    Agricultural Zone<br />
-                    Egypt
-                  </p>
+                  <div className="text-muted-foreground">
+                    <a 
+                      href="https://maps.app.goo.gl/b5RoWeXWRueUGMrV8" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      View our farm location on Google Maps
+                    </a>
+                    <p className="mt-1">Agricultural Zone, Egypt</p>
+                  </div>
                 </div>
                 
                 <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
