@@ -8,21 +8,31 @@ export interface ContactFormData {
 }
 
 export const submitContactForm = async (formData: ContactFormData) => {
-  // This will be updated to use Supabase once connected
-  // For now, we'll simulate an API call
-  
-  console.log("Contact form submission:", formData);
-  
-  // Simulate API delay
-  await new Promise(resolve => setTimeout(resolve, 1000));
-  
-  // In production with Supabase, this would:
-  // 1. Insert the form data into a contacts table
-  // 2. Send email notifications to ahmedelafifi@strawberryoasis.com and Mohamed.fahmy@strawberryoasis.com
-  // 3. Send an auto-reply to the customer
-  
-  return {
-    success: true,
-    message: "Your message has been received. We'll get back to you within 24 hours."
-  };
+  try {
+    // Submit to Supabase Edge Function that will handle email sending
+    const response = await fetch('/api/send-contact-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        ...formData,
+        targetEmail: 'hlaahmedkamal@gmail.com'
+      }),
+    });
+
+    const result = await response.json();
+    
+    if (!response.ok) {
+      throw new Error(result.error || 'Failed to send message');
+    }
+
+    return {
+      success: true,
+      message: "Your message has been sent successfully! We'll get back to you within 24 hours."
+    };
+  } catch (error) {
+    console.error('Error submitting contact form:', error);
+    throw new Error('Failed to send message. Please try again or contact us directly.');
+  }
 };

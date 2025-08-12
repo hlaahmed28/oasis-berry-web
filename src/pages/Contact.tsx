@@ -160,11 +160,11 @@ const Contact = () => {
                 </Button>
               </form>
               
-              <div className="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
-                <h3 className="text-sm font-semibold text-blue-800 mb-2">📧 Form Submissions</h3>
-                <p className="text-blue-700 text-sm">
-                  Currently form submissions are logged for testing. To receive actual emails, 
-                  connect your project to Supabase using the green button in the top right.
+              <div className="mt-6 p-4 bg-green-50 rounded-lg border-l-4 border-green-500">
+                <h3 className="text-sm font-semibold text-green-800 mb-2">✅ Email Integration Active</h3>
+                <p className="text-green-700 text-sm">
+                  Form submissions will be automatically sent to hlaahmedkamal@gmail.com. 
+                  To complete email setup, add your RESEND_API_KEY to Supabase secrets.
                 </p>
               </div>
             </div>
