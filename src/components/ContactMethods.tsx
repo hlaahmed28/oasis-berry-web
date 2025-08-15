@@ -58,7 +58,7 @@ const ContactMethods = () => {
               <CardContent className="flex flex-col justify-end">
                 <div className="space-y-2 mb-6 min-h-[3rem] flex flex-col justify-center">
                   {method.details.map((detail, idx) => (
-                    <p key={idx} className="text-sm text-muted-foreground">
+                    <p key={idx} className="text-sm text-muted-foreground break-words">
                       {detail}
                     </p>
                   ))}
