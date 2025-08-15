@@ -1,0 +1,125 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "farm": "Farm",
+    "quality": "Quality",
+    "export": "Export",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "Premium Egyptian Strawberries",
+    "subtitle": "From Our Farm to Your Table",
+    "description": "Experience the finest quality strawberries, cultivated with care in Egypt's fertile lands. Fresh, nutritious, and bursting with natural sweetness.",
+    "cta": "Explore Our Products",
+    "contact": "Contact Us"
+  },
+  "about": {
+    "title": "About Strawberry Oasis",
+    "subtitle": "Your Trusted Partner in Premium Egyptian Strawberries",
+    "description": "We are passionate farmers and exporters dedicated to bringing you the finest quality strawberries from Egypt's rich agricultural lands.",
+    "experience": "Years of Experience",
+    "countries": "Countries Served",
+    "farms": "Partner Farms"
+  },
+  "products": {
+    "title": "Our Premium Products",
+    "subtitle": "Fresh, Quality Strawberries for Every Need",
+    "fresh": {
+      "title": "Fresh Strawberries",
+      "description": "Hand-picked premium strawberries, carefully selected for optimal ripeness and flavor."
+    },
+    "frozen": {
+      "title": "Frozen Strawberries",
+      "description": "Flash-frozen strawberries that retain all their nutritional value and taste."
+    },
+    "organic": {
+      "title": "Organic Strawberries",
+      "description": "Certified organic strawberries grown without synthetic pesticides or fertilizers."
+    },
+    "viewAll": "View All Products"
+  },
+  "contact": {
+    "title": "Let's Work Together",
+    "subtitle": "Ready to import premium Egyptian strawberries? Get in touch with our export team for quotes, specifications, and partnership opportunities.",
+    "form": {
+      "title": "Send Us a Message",
+      "name": "Full Name",
+      "email": "Email Address",
+      "company": "Company Name",
+      "country": "Country",
+      "message": "Message",
+      "placeholder": "Tell us about your requirements, quantities, and timeline...",
+      "required": "*",
+      "send": "Send Message",
+      "sending": "Sending..."
+    },
+    "info": {
+      "title": "Contact Information",
+      "phone": "Phone Numbers",
+      "email": "Email Addresses",
+      "location": "Location",
+      "hours": "Business Hours",
+      "viewMap": "View our farm location on Google Maps",
+      "address": "Agricultural Zone, Egypt",
+      "schedule": {
+        "weekdays": "Monday - Friday: 8:00 AM - 6:00 PM (EET)",
+        "saturday": "Saturday: 9:00 AM - 2:00 PM (EET)",
+        "sunday": "Sunday: Closed"
+      }
+    },
+    "methods": {
+      "title": "Get In Touch With Us",
+      "subtitle": "Choose your preferred method to connect with our export team and start your strawberry import journey",
+      "call": {
+        "title": "Direct Call",
+        "description": "Speak directly with our export team for immediate assistance and quotes",
+        "action": "Call Now"
+      },
+      "email": {
+        "title": "Email Inquiry",
+        "description": "Send detailed requirements and receive comprehensive proposals",
+        "action": "Send Email"
+      },
+      "form": {
+        "title": "Contact Form",
+        "description": "Fill out our detailed form for structured communication and follow-up",
+        "action": "Fill Form",
+        "response": "Quick response within 24 hours",
+        "process": "Structured inquiry process"
+      }
+    },
+    "success": {
+      "title": "Message sent successfully!",
+      "description": "Thank you for your inquiry. We'll get back to you within 24 hours."
+    }
+  },
+  "footer": {
+    "company": "Strawberry Oasis",
+    "description": "Premium Egyptian strawberries from our farm to your table. Quality, freshness, and excellence in every berry.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact Info",
+    "follow": "Follow Us",
+    "rights": "All rights reserved.",
+    "made": "Made with"
+  },
+  "farm": {
+    "title": "Our Farm",
+    "subtitle": "Where Quality Begins"
+  },
+  "quality": {
+    "title": "Quality Assurance",
+    "subtitle": "Excellence in Every Berry"
+  },
+  "export": {
+    "title": "Export Services",
+    "subtitle": "Global Distribution Solutions"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you're looking for doesn't exist.",
+    "home": "Go Home"
+  }
+}
