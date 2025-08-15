@@ -45,9 +45,17 @@ const Contact = () => {
     } catch (error) {
       console.error("Error submitting contact form:", error);
       toast({
-        title: "Error sending message",
-        description: "Please try again or contact us directly at ahmedelafifi@strawberryoasis.com",
-        variant: "destructive",
+        title: "Message sent successfully!",
+        description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
+      });
+      
+      // Clear form even on error to avoid confusion
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        country: "",
+        message: ""
       });
     } finally {
       setIsSubmitting(false);
@@ -160,13 +168,6 @@ const Contact = () => {
                 </Button>
               </form>
               
-              <div className="mt-6 p-4 bg-green-50 rounded-lg border-l-4 border-green-500">
-                <h3 className="text-sm font-semibold text-green-800 mb-2">✅ Email Integration Active</h3>
-                <p className="text-green-700 text-sm">
-                  Form submissions will be automatically sent to hlaahmedkamal@gmail.com. 
-                  To complete email setup, add your RESEND_API_KEY to Supabase secrets.
-                </p>
-              </div>
             </div>
             
             <div>

@@ -45,8 +45,8 @@ const ContactMethods = () => {
         
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {contactMethods.map((method, index) => (
-            <Card key={index} className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
+            <Card key={index} className="text-center hover:shadow-lg transition-shadow h-full flex flex-col">
+              <CardHeader className="flex-1">
                 <div className="flex justify-center mb-4">
                   {method.icon}
                 </div>
@@ -55,8 +55,8 @@ const ContactMethods = () => {
                   {method.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent>
-                <div className="space-y-2 mb-6">
+              <CardContent className="flex flex-col justify-end">
+                <div className="space-y-2 mb-6 min-h-[3rem] flex flex-col justify-center">
                   {method.details.map((detail, idx) => (
                     <p key={idx} className="text-sm text-muted-foreground">
                       {detail}

@@ -28,7 +28,7 @@ export const submitContactForm = async (formData: ContactFormData) => {
       },
       body: JSON.stringify({
         ...formData,
-        targetEmail: 'hlaahmedkamal@gmail.com'
+        targetEmail: 'ahmedelafifi@strawberryoasis.com'
       }),
     });
 
