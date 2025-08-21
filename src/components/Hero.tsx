@@ -26,10 +26,10 @@ const Hero = () => {
   }, [emblaApi]);
 
   return (
-    <section className="relative bg-gradient-to-r from-green-50 to-red-50 py-20 px-4 h-screen">
+    <section className="relative bg-gradient-to-r from-green-50 to-red-50 py-20 px-4 min-h-screen overflow-hidden">
       <div className="absolute inset-0 bg-black/50"></div>
       
-      <div className="absolute inset-0" ref={emblaRef}>
+      <div className="absolute inset-0 overflow-hidden" ref={emblaRef}>
         <div className="flex h-full">
           {bannerImages.map((image, index) => (
             <div 
