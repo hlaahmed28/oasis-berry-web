@@ -2,39 +2,32 @@
 import { Phone, Mail, MessageSquare } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { useTranslation } from "react-i18next";
 
 const ContactMethods = () => {
-  const { t, i18n } = useTranslation();
-
-  const getLocalizedPath = (path: string) => {
-    const currentLang = i18n.language || 'en';
-    return `/${currentLang}${path === '/' ? '' : path}`;
-  };
   const contactMethods = [
     {
       icon: <Phone className="h-8 w-8 text-red-600" />,
-      title: t('contact.methods.call.title'),
-      description: t('contact.methods.call.description'),
-      action: t('contact.methods.call.action'),
+      title: "Direct Call",
+      description: "Speak directly with our export team for immediate assistance and quotes",
+      action: "Call Now",
       details: ["Ahmed El Afifi: +20 155 483 3334", "Mohamed Fahmy: +20 100 388 7243"],
       href: "tel:+201554833334"
     },
     {
       icon: <Mail className="h-8 w-8 text-red-600" />,
-      title: t('contact.methods.email.title'),
-      description: t('contact.methods.email.description'),
-      action: t('contact.methods.email.action'),
+      title: "Email Inquiry",
+      description: "Send detailed requirements and receive comprehensive proposals",
+      action: "Send Email",
       details: ["ahmedelafifi@strawberryoasis.com", "Mohamed.fahmy@strawberryoasis.com"],
       href: "mailto:ahmedelafifi@strawberryoasis.com"
     },
     {
       icon: <MessageSquare className="h-8 w-8 text-red-600" />,
-      title: t('contact.methods.form.title'),
-      description: t('contact.methods.form.description'),
-      action: t('contact.methods.form.action'),
-      details: [t('contact.methods.form.response'), t('contact.methods.form.process')],
-      href: getLocalizedPath('/contact')
+      title: "Contact Form",
+      description: "Fill out our detailed form for structured communication and follow-up",
+      action: "Fill Form",
+      details: ["Quick response within 24 hours", "Structured inquiry process"],
+      href: "/contact"
     }
   ];
 
@@ -43,10 +36,10 @@ const ContactMethods = () => {
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            {t('contact.methods.title')}
+            Get In Touch With Us
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            {t('contact.methods.subtitle')}
+            Choose your preferred method to connect with our export team and start your strawberry import journey
           </p>
         </div>
         
