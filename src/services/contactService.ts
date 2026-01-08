@@ -21,21 +21,13 @@ export const submitContactForm = async (formData: ContactFormData) => {
     }
 
     // Submit to Supabase Edge Function that will handle email sending
-    const response = await fetch('/api/send-contact-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        ...formData,
-        targetEmail: 'ahmedelafifi@strawberryoasis.com'
-      }),
+    const response = await supabase.functions.invoke('send-contact-email', {
+      body: formData,
     });
 
-    const result = await response.json();
-    
-    if (!response.ok) {
-      throw new Error(result.error || 'Failed to send message');
+    if (response.error) {
+      console.error('Edge function error:', response.error);
+      // Don't throw - form was saved to database successfully
     }
 
     return {

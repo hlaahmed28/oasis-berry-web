@@ -13,8 +13,12 @@ interface ContactFormData {
   company: string
   country: string
   message: string
-  targetEmail: string
 }
+
+const TARGET_EMAILS = [
+  'Mohamed.fahmy@strawberryoasis.com',
+  'ahmedelafifi@strawberryoasis.com'
+]
 
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -23,10 +27,13 @@ serve(async (req) => {
   }
 
   try {
-    const { name, email, company, country, message, targetEmail }: ContactFormData = await req.json()
+    const { name, email, company, country, message }: ContactFormData = await req.json()
+
+    console.log('Received contact form submission:', { name, email, company, country })
 
     // Validate required fields
-    if (!name || !email || !message || !targetEmail) {
+    if (!name || !email || !message) {
+      console.log('Missing required fields')
       return new Response(
         JSON.stringify({ error: 'Missing required fields' }),
         { 
@@ -51,6 +58,7 @@ serve(async (req) => {
 
     // Send email using Resend
     if (RESEND_API_KEY) {
+      console.log('Sending email to:', TARGET_EMAILS)
       const res = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
@@ -58,8 +66,8 @@ serve(async (req) => {
           'Authorization': `Bearer ${RESEND_API_KEY}`,
         },
         body: JSON.stringify({
-          from: 'Strawberry Oasis <noreply@strawberryoasis.com>',
-          to: [targetEmail],
+          from: 'Strawberry Oasis <onboarding@resend.dev>',
+          to: TARGET_EMAILS,
           subject: `New Contact Form Submission from ${name}`,
           html: emailHtml,
           reply_to: email,
@@ -71,6 +79,10 @@ serve(async (req) => {
         console.error('Resend API error:', error)
         throw new Error('Failed to send email via Resend')
       }
+      
+      console.log('Email sent successfully')
+    } else {
+      console.log('RESEND_API_KEY not configured, skipping email send')
     }
 
     return new Response(
