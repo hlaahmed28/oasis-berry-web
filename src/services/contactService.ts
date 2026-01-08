@@ -18,6 +18,16 @@ export const submitContactForm = async (formData: ContactFormData) => {
       throw new Error(`Database error: ${dbError.message}`);
     }
 
+    // Send email notification
+    const { error: emailError } = await supabase.functions.invoke('send-contact-notification', {
+      body: formData,
+    });
+
+    if (emailError) {
+      console.error('Email notification error:', emailError);
+      // Don't throw - form was saved successfully
+    }
+
     return {
       success: true,
       message: "Your message has been sent successfully! We'll get back to you within 24 hours."
