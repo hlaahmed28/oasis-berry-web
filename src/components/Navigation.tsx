@@ -11,13 +11,13 @@ const Navigation = () => {
     <nav className="bg-white shadow-sm border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3 group hover-scale">
             <img 
               src="/lovable-uploads/9937b735-6e84-4902-9b1a-9ce2cb363f4f.png" 
               alt="Strawberry Oasis Logo" 
-              className="h-16 w-auto"
+              className="h-16 w-auto transition-transform duration-300 group-hover:rotate-3"
             />
-            <span className="text-xl font-bold text-primary">Strawberry Oasis</span>
+            <span className="text-base font-bold text-destructive transition-colors duration-300 group-hover:text-destructive/80">Strawberry Oasis</span>
           </Link>
           
           {/* Desktop Navigation */}
