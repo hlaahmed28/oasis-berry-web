@@ -47,20 +47,24 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="relative container mx-auto text-center flex flex-col justify-center h-full">
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-2xl [text-shadow:_2px_2px_4px_rgb(0_0_0_/_80%)]">
-          Premium Egyptian Strawberries
-        </h1>
-        <h2 className="text-2xl md:text-3xl text-white mb-8 drop-shadow-2xl [text-shadow:_2px_2px_4px_rgb(0_0_0_/_80%)]">
-          Fresh from Our Farms to the World
-        </h2>
-        <p className="text-lg text-white max-w-3xl mx-auto mb-10 leading-relaxed drop-shadow-2xl [text-shadow:_1px_1px_3px_rgb(0_0_0_/_80%)]">
-          Welcome to Strawberry Oasis, where nature meets excellence. We specialize in growing and 
-          exporting the finest, fresh strawberries from the fertile lands of Egypt. Certified by 
-          European and ISO standards, our strawberries are known for their rich flavor, vibrant color, 
-          and exceptional quality.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <div className="relative container mx-auto text-center flex flex-col justify-center items-center h-full">
+        {/* Glass overlay for text readability - mobile-first */}
+        <div className="bg-slate-900/65 md:bg-slate-900/50 backdrop-blur-sm rounded-xl px-6 py-8 md:px-12 md:py-10 mx-4 md:mx-auto max-w-4xl">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-2xl [text-shadow:_2px_2px_4px_rgb(0_0_0_/_80%)]">
+            Premium Egyptian Strawberries
+          </h1>
+          <h2 className="text-2xl md:text-3xl text-white mb-8 drop-shadow-2xl [text-shadow:_2px_2px_4px_rgb(0_0_0_/_80%)]">
+            Fresh from Our Farms to the World
+          </h2>
+          <p className="text-lg text-white max-w-3xl mx-auto leading-relaxed drop-shadow-2xl [text-shadow:_1px_1px_3px_rgb(0_0_0_/_80%)]">
+            Welcome to Strawberry Oasis, where nature meets excellence. We specialize in growing and 
+            exporting the finest, fresh strawberries from the fertile lands of Egypt. Certified by 
+            European and ISO standards, our strawberries are known for their rich flavor, vibrant color, 
+            and exceptional quality.
+          </p>
+        </div>
+        
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
           <Button asChild size="lg" className="bg-red-600 hover:bg-red-700 text-white shadow-lg">
             <Link to="/farm">Explore Our Farm</Link>
           </Button>
