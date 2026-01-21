@@ -22,25 +22,25 @@ const Navigation = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            <Link to="/" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/" className="text-destructive hover:text-destructive/70 transition-colors">
               Home
             </Link>
-            <Link to="/about" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/about" className="text-destructive hover:text-destructive/70 transition-colors">
               About Us
             </Link>
-            <Link to="/products" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/products" className="text-destructive hover:text-destructive/70 transition-colors">
               Products
             </Link>
-            <Link to="/farm" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/farm" className="text-destructive hover:text-destructive/70 transition-colors">
               Our Farm
             </Link>
-            <Link to="/quality" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/quality" className="text-destructive hover:text-destructive/70 transition-colors">
               Quality
             </Link>
-            <Link to="/export" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/export" className="text-destructive hover:text-destructive/70 transition-colors">
               Export
             </Link>
-            <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/contact" className="text-destructive hover:text-destructive/70 transition-colors">
               Contact
             </Link>
           </div>
@@ -56,29 +56,28 @@ const Navigation = () => {
           </Button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden pb-4">
             <div className="flex flex-col space-y-2">
-              <Link to="/" className="py-2 text-foreground hover:text-primary transition-colors">
+              <Link to="/" className="py-2 text-destructive hover:text-destructive/70 transition-colors">
                 Home
               </Link>
-              <Link to="/about" className="py-2 text-foreground hover:text-primary transition-colors">
+              <Link to="/about" className="py-2 text-destructive hover:text-destructive/70 transition-colors">
                 About Us
               </Link>
-              <Link to="/products" className="py-2 text-foreground hover:text-primary transition-colors">
+              <Link to="/products" className="py-2 text-destructive hover:text-destructive/70 transition-colors">
                 Products
               </Link>
-              <Link to="/farm" className="py-2 text-foreground hover:text-primary transition-colors">
+              <Link to="/farm" className="py-2 text-destructive hover:text-destructive/70 transition-colors">
                 Our Farm
               </Link>
-              <Link to="/quality" className="py-2 text-foreground hover:text-primary transition-colors">
+              <Link to="/quality" className="py-2 text-destructive hover:text-destructive/70 transition-colors">
                 Quality
               </Link>
-              <Link to="/export" className="py-2 text-foreground hover:text-primary transition-colors">
+              <Link to="/export" className="py-2 text-destructive hover:text-destructive/70 transition-colors">
                 Export
               </Link>
-              <Link to="/contact" className="py-2 text-foreground hover:text-primary transition-colors">
+              <Link to="/contact" className="py-2 text-destructive hover:text-destructive/70 transition-colors">
                 Contact
               </Link>
             </div>
