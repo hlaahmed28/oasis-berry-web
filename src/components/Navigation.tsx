@@ -11,19 +11,13 @@ const Navigation = () => {
     <nav className="bg-white shadow-sm border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center gap-3">
             <img 
               src="/lovable-uploads/9937b735-6e84-4902-9b1a-9ce2cb363f4f.png" 
               alt="Strawberry Oasis Logo" 
-              className="h-12 w-auto"
-              onError={(e) => {
-                console.log('Logo failed to load:', e);
-                console.log('Attempted to load:', e.currentTarget.src);
-              }}
-              onLoad={() => {
-                console.log('Logo loaded successfully');
-              }}
+              className="h-16 w-auto"
             />
+            <span className="text-xl font-bold text-primary">Strawberry Oasis</span>
           </Link>
           
           {/* Desktop Navigation */}
