@@ -8,7 +8,7 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-sm border-b border-border sticky top-0 z-50">
+    <nav className="bg-gray-900/90 backdrop-blur-sm shadow-sm border-b border-gray-800 sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center gap-3 group hover-scale">
@@ -17,30 +17,30 @@ const Navigation = () => {
               alt="Strawberry Oasis Logo" 
               className="h-16 w-auto transition-transform duration-300 group-hover:rotate-3"
             />
-            <span className="text-base font-bold text-destructive transition-colors duration-300 group-hover:text-destructive/80">Strawberry Oasis</span>
+            <span className="text-base font-bold text-white transition-colors duration-300 group-hover:text-gray-300">Strawberry Oasis</span>
           </Link>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            <Link to="/" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
               Home
             </Link>
-            <Link to="/about" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
               About Us
             </Link>
-            <Link to="/products" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/products" className="text-gray-300 hover:text-white transition-colors">
               Products
             </Link>
-            <Link to="/farm" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/farm" className="text-gray-300 hover:text-white transition-colors">
               Our Farm
             </Link>
-            <Link to="/quality" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/quality" className="text-gray-300 hover:text-white transition-colors">
               Quality
             </Link>
-            <Link to="/export" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/export" className="text-gray-300 hover:text-white transition-colors">
               Export
             </Link>
-            <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
               Contact
             </Link>
           </div>
@@ -49,7 +49,7 @@ const Navigation = () => {
           <Button
             variant="ghost"
             size="sm"
-            className="md:hidden"
+            className="md:hidden text-white hover:text-gray-300 hover:bg-gray-800"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <Menu className="h-6 w-6" />
@@ -60,25 +60,25 @@ const Navigation = () => {
         {isMenuOpen && (
           <div className="md:hidden pb-4">
             <div className="flex flex-col space-y-2">
-              <Link to="/" className="py-2 text-foreground hover:text-primary transition-colors">
+              <Link to="/" className="py-2 text-gray-300 hover:text-white transition-colors">
                 Home
               </Link>
-              <Link to="/about" className="py-2 text-foreground hover:text-primary transition-colors">
+              <Link to="/about" className="py-2 text-gray-300 hover:text-white transition-colors">
                 About Us
               </Link>
-              <Link to="/products" className="py-2 text-foreground hover:text-primary transition-colors">
+              <Link to="/products" className="py-2 text-gray-300 hover:text-white transition-colors">
                 Products
               </Link>
-              <Link to="/farm" className="py-2 text-foreground hover:text-primary transition-colors">
+              <Link to="/farm" className="py-2 text-gray-300 hover:text-white transition-colors">
                 Our Farm
               </Link>
-              <Link to="/quality" className="py-2 text-foreground hover:text-primary transition-colors">
+              <Link to="/quality" className="py-2 text-gray-300 hover:text-white transition-colors">
                 Quality
               </Link>
-              <Link to="/export" className="py-2 text-foreground hover:text-primary transition-colors">
+              <Link to="/export" className="py-2 text-gray-300 hover:text-white transition-colors">
                 Export
               </Link>
-              <Link to="/contact" className="py-2 text-foreground hover:text-primary transition-colors">
+              <Link to="/contact" className="py-2 text-gray-300 hover:text-white transition-colors">
                 Contact
               </Link>
             </div>
