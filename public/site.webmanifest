@@ -1,0 +1,17 @@
+{
+  "name": "Strawberry Oasis — Premium Egyptian Strawberries",
+  "short_name": "Strawberry Oasis",
+  "description": "GLOBALG.A.P and ISO 22000 certified fresh Egyptian strawberries exported worldwide.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF8F5",
+  "theme_color": "#0A180F",
+  "icons": [
+    {
+      "src": "/lovable-uploads/9937b735-6e84-4902-9b1a-9ce2cb363f4f.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
