@@ -4,7 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import SEO, { SITE_URL } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Sprout } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const breadcrumbs = [
   { name: "Home", path: "/" },
@@ -26,7 +26,7 @@ const farmPractices = [
     category: "Agronomy",
     title: "Expert Care",
     image: "/lovable-uploads/a9f9fa22-07e2-4305-bc8e-9af9cdccd5a0.png",
-    alt: "Farm workers tending the strawberry fields",
+    alt: "Farm workers tending the strawberry fields in Egypt",
     description:
       "Our skilled farmers and agronomists ensure each crop receives attentive, daily care — from nursery planting to peak-ripeness harvest.",
   },
@@ -35,7 +35,7 @@ const farmPractices = [
     category: "Nutrition",
     title: "Organic Fertilizers",
     image: "/lovable-uploads/bf25374c-4ce7-4f81-b6fb-a50a53ff3bb0.png",
-    alt: "Flowering strawberry plants in fertile beds",
+    alt: "Flowering strawberry plants in fertile Egyptian beds",
     description:
       "We rely on safe, certified organic fertilizers and responsible crop protection that preserve soil biodiversity and enhance natural berry sweetness.",
   },
@@ -61,7 +61,7 @@ const farmPractices = [
 
 const Farm = () => {
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden flex flex-col">
+    <div className="min-h-screen bg-cream-100 overflow-x-hidden flex flex-col">
       <SEO
         title="Our Egyptian Strawberry Farm & Sustainable Cultivation"
         description="Tour our fertile Egyptian strawberry farms featuring precision irrigation, organic fertilizers, hygiene-controlled packing stations, and certified quality control."
@@ -76,87 +76,71 @@ const Farm = () => {
 
       <main className="flex-1">
         <PageHeader
-          eyebrow="Our Farm"
-          title="Where Quality Begins"
+          eyebrow="Our Farms"
+          title="Where quality begins."
           description="Spanning fertile acres across Egypt's premier agricultural regions, engineered for sustainable cultivation and export excellence."
           breadcrumbs={breadcrumbs}
         />
 
-        <section className="py-16 md:py-24">
+        <section className="py-14 md:py-20">
           <div className="container mx-auto">
-            <div className="max-w-5xl mx-auto">
-              {/* Panoramic Farm Image */}
-              <div className="overflow-hidden rounded-3xl shadow-elevated border border-border/70 mb-14 bg-card">
-                <img
-                  src="/lovable-uploads/4fd05db0-df8c-4f3d-a995-035533f5c47b.png"
-                  alt="Strawberry Oasis cultivated rows at golden hour"
-                  className="w-full h-72 sm:h-96 md:h-[460px] object-cover"
-                />
-              </div>
+            {/* Panoramic Farm Image */}
+            <div className="overflow-hidden bg-cream-200 mb-14">
+              <img
+                src="/lovable-uploads/4fd05db0-df8c-4f3d-a995-035533f5c47b.png"
+                alt="Strawberry Oasis cultivated rows at golden hour"
+                className="w-full h-72 sm:h-96 md:h-[460px] object-cover"
+              />
+            </div>
 
-              <p className="text-xl md:text-2xl font-serif text-foreground leading-relaxed text-center max-w-3xl mx-auto mb-16">
-                Our farm spans fertile acres of rich, arable land in Egypt&apos;s most productive
-                growing zones — uniting modern precision agriculture with environmental stewardship.
-              </p>
-
-              {/* 2x2 Visual Story Cards */}
-              <div className="grid md:grid-cols-2 gap-8 mb-16">
-                {farmPractices.map((item) => (
-                  <article
-                    key={item.title}
-                    className="group rounded-3xl overflow-hidden bg-card border border-border/80 shadow-soft hover:shadow-elevated transition-all duration-300 flex flex-col"
-                  >
-                    <div className="relative overflow-hidden aspect-[16/10] bg-muted">
-                      <img
-                        src={item.image}
-                        alt={item.alt}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                      <div className="absolute top-4 left-4 flex items-center gap-2">
-                        <span className="px-3 py-1 rounded-full text-xs font-semibold bg-oasis-950/80 text-white backdrop-blur-sm">
-                          {item.step} &bull; {item.category}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="p-7 flex-1 flex flex-col">
-                      <h2 className="text-2xl font-serif font-semibold text-foreground mb-2.5">
-                        {item.title}
-                      </h2>
-                      <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
-                        {item.description}
-                      </p>
-                    </div>
-                  </article>
-                ))}
-              </div>
-
-              {/* Farm Excellence Callout */}
-              <div className="rounded-3xl bg-oasis-950 text-white p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-                <div className="max-w-2xl space-y-3">
-                  <span className="eyebrow text-emerald-400">
-                    <Sprout className="h-3.5 w-3.5" />
-                    Farm Excellence
+            <div className="grid md:grid-cols-2 gap-10 lg:gap-12 mb-16">
+              {farmPractices.map((item) => (
+                <article key={item.title} className="flex flex-col">
+                  <div className="overflow-hidden bg-cream-200 mb-4">
+                    <img
+                      src={item.image}
+                      alt={item.alt}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full aspect-[16/10] object-cover"
+                    />
+                  </div>
+                  <span className="eyebrow text-berry-600 mb-1.5">
+                    {item.step} &mdash; {item.category}
                   </span>
-                  <h3 className="text-2xl md:text-3xl font-serif font-semibold text-white">
-                    Grown with precision, harvested for the world
-                  </h3>
-                  <p className="text-white/75 leading-relaxed text-sm md:text-base">
-                    Every stage of our farming process is designed with one purpose: producing the
-                    finest strawberries that satisfy international retail standards while respecting
-                    our land and community.
+                  <h2 className="text-2xl sm:text-3xl font-serif font-bold text-oasis-900 mb-2">
+                    {item.title}
+                  </h2>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                    {item.description}
                   </p>
-                </div>
-                <Button
-                  asChild
-                  size="lg"
-                  className="rounded-full bg-berry-600 hover:bg-berry-700 text-white px-7 h-12 shadow-berry shrink-0"
-                >
-                  <Link to="/export" className="inline-flex items-center gap-2">
-                    Explore Export Logistics
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </Button>
+                </article>
+              ))}
+            </div>
+
+            {/* Farm Excellence Band */}
+            <div className="bg-oasis-900 text-cream-50 p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+              <div className="max-w-2xl space-y-3">
+                <span className="eyebrow text-cream-300/80">Farm Excellence</span>
+                <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white">
+                  Grown with precision, harvested for the world.
+                </h3>
+                <p className="text-cream-100/80 leading-relaxed text-sm md:text-base">
+                  Every stage of our farming process is designed with one purpose: producing the
+                  finest strawberries that satisfy international retail standards while respecting
+                  our land and community.
+                </p>
               </div>
+              <Button
+                asChild
+                size="lg"
+                className="rounded-[3px] bg-cream-50 hover:bg-white text-oasis-900 px-6 h-11 text-sm font-semibold shadow-none shrink-0"
+              >
+                <Link to="/export" className="inline-flex items-center gap-2">
+                  Export Logistics
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
             </div>
           </div>
         </section>

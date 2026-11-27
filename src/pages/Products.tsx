@@ -11,11 +11,11 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Link } from "react-router-dom";
-import { CheckCircle2, ShieldCheck, ZoomIn, ArrowRight, Package } from "lucide-react";
+import { Check, ZoomIn, ArrowRight } from "lucide-react";
 
 const breadcrumbs = [
   { name: "Home", path: "/" },
-  { name: "Products", path: "/products" },
+  { name: "Varieties & Products", path: "/products" },
 ];
 
 const productsSchema = {
@@ -74,32 +74,30 @@ const varieties = [
     badge: "Flagship Export Variety",
     image: "/lovable-uploads/bf25374c-4ce7-4f81-b6fb-a50a53ff3bb0.png",
     description:
-      "Our flagship variety, Festival strawberries are renowned for their exceptional sweetness and vibrant red color that catches the eye and delights the palate.",
+      "Juicy, sweet, and firm with an intense crimson color and glossy finish. Extended post-harvest life makes it our flagship choice for long-haul international markets.",
     features: [
       "Intense red color with glossy finish",
       "Juicy, sweet flavor profile",
       "Extended shelf life for export",
       "Large, uniform berry size",
-      "Excellent firmness for transport",
+      "Excellent firmness for cold-chain transit",
     ],
-    highlight: "Perfect for international markets demanding premium quality",
-    highlightStyle: "bg-berry-50 border-berry-200/80 text-berry-800",
+    fit: "Ideal for international markets demanding premium quality and shelf life.",
   },
   {
     name: "Florida Beauty",
-    badge: "Early Season Specialist",
+    badge: "Early Harvest Variety",
     image: "/lovable-uploads/421700b1-f980-46d0-9122-e2acfe70bc4f.png",
     description:
-      "Known for early harvest and exceptional vibrant color, Florida Beauty strawberries are perfect for markets that demand both freshness and speed to market.",
+      "High-yield early-season variety prized for vibrant color, attractive uniform shape, and rapid delivery to fresh retail produce programs.",
     features: [
-      "Early harvest capability",
-      "Brilliant color development",
-      "Fast market delivery",
-      "Consistent berry quality",
-      "Excellent for fresh consumption",
+      "Early harvest capability starting November",
+      "Brilliant uniform ruby coloration",
+      "Fast air-freight market delivery",
+      "Consistent grading and berry shape",
+      "Crisp texture ideal for fresh consumption",
     ],
-    highlight: "Ideal for time-sensitive markets and fresh produce chains",
-    highlightStyle: "bg-oasis-50 border-oasis-200/80 text-oasis-800",
+    fit: "Ideal for early-season programs and premium retail chains.",
   },
 ];
 
@@ -129,7 +127,7 @@ const packagingOptions = [
 
 const Products = () => {
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden flex flex-col">
+    <div className="min-h-screen bg-cream-100 overflow-x-hidden flex flex-col">
       <SEO
         title="Fresh Strawberry Varieties & Custom Export Packaging"
         description="Explore Festival and Florida Beauty fresh Egyptian strawberries, official Ministry of Agriculture lab certificates, and custom 250g/500g clamshells & 2kg/5kg export cartons."
@@ -144,83 +142,63 @@ const Products = () => {
 
       <main className="flex-1">
         <PageHeader
-          eyebrow="Our Products"
-          title="Freshness You Can Taste"
+          eyebrow="Our Varieties"
+          title="Meet the harvest."
           description="Premium strawberry varieties cultivated with precision and packed to order for fresh retail, foodservice, and global exports."
           breadcrumbs={breadcrumbs}
         />
 
-        {/* Varieties Grid */}
-        <section className="py-16 md:py-24">
+        {/* Varieties Section */}
+        <section className="py-14 md:py-20">
           <div className="container mx-auto">
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 mb-20">
+            <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 pb-16 mb-16 border-b border-cream-400/80">
               {varieties.map((variety) => (
-                <article
-                  key={variety.name}
-                  className="rounded-3xl overflow-hidden bg-card border border-border/80 shadow-soft hover:shadow-elevated transition-all duration-300 flex flex-col group"
-                >
-                  <div className="relative overflow-hidden aspect-[16/10] bg-muted">
+                <article key={variety.name} className="flex flex-col">
+                  <div className="overflow-hidden bg-cream-200 mb-5">
                     <img
                       src={variety.image}
-                      alt={variety.name}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      alt={`${variety.name} — fresh Egyptian strawberries`}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full aspect-[16/10] object-cover"
                     />
-                    <span className="absolute top-4 left-4 px-3.5 py-1 rounded-full text-xs font-semibold bg-white/95 text-berry-700 shadow-sm">
-                      {variety.badge}
-                    </span>
                   </div>
+                  <span className="eyebrow text-berry-600 mb-2">{variety.badge}</span>
+                  <h2 className="text-3xl font-serif font-bold text-oasis-900 mb-3">
+                    {variety.name}
+                  </h2>
+                  <p className="text-base text-muted-foreground leading-relaxed mb-6">
+                    {variety.description}
+                  </p>
 
-                  <div className="p-7 md:p-9 flex flex-col flex-1">
-                    <h2 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-3">
-                      {variety.name}
-                    </h2>
-                    <p className="text-muted-foreground leading-relaxed mb-6">
-                      {variety.description}
-                    </p>
+                  <ul className="space-y-2.5 border-t border-cream-400/70 pt-5 mb-6 flex-1">
+                    {variety.features.map((feature) => (
+                      <li
+                        key={feature}
+                        className="flex items-center gap-2.5 text-sm text-oasis-900/90"
+                      >
+                        <Check className="h-4 w-4 text-berry-600 shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
 
-                    <div className="mb-6 flex-1">
-                      <h3 className="font-sans text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground mb-3.5">
-                        Key Characteristics
-                      </h3>
-                      <ul className="space-y-2.5">
-                        {variety.features.map((feature) => (
-                          <li
-                            key={feature}
-                            className="flex items-center gap-2.5 text-sm md:text-base text-foreground/85"
-                          >
-                            <CheckCircle2 className="h-4 w-4 text-oasis-600 shrink-0" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div
-                      className={`rounded-2xl border px-4 py-3.5 text-sm font-medium ${variety.highlightStyle}`}
-                    >
-                      {variety.highlight}
-                    </div>
-                  </div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.12em] text-oasis-900 border-l-2 border-berry-600 pl-3.5 py-1">
+                    {variety.fit}
+                  </p>
                 </article>
               ))}
             </div>
 
             {/* Official Ministry of Agriculture Certificate */}
-            <div className="rounded-3xl bg-oasis-950 text-white p-8 md:p-12 mb-20 overflow-hidden relative">
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute -top-24 right-0 h-80 w-80 rounded-full bg-oasis-600/25 blur-3xl"
-              />
-              <div className="relative grid lg:grid-cols-12 gap-10 items-center">
-                <div className="lg:col-span-7 space-y-5">
-                  <span className="eyebrow text-emerald-400">
-                    <ShieldCheck className="h-3.5 w-3.5" />
-                    Official Lab Verification
-                  </span>
-                  <h2 className="text-3xl md:text-4xl font-serif font-semibold text-white">
-                    Quality Certification
+            <div className="bg-oasis-900 text-cream-50 p-8 md:p-12 mb-16">
+              <div className="grid lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-7 space-y-4">
+                  <span className="eyebrow text-cream-300/80">Official Lab Verification</span>
+                  <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">
+                    Ministry of Agriculture Test Certificate.
                   </h2>
-                  <p className="text-white/75 text-base md:text-lg leading-relaxed">
+                  <p className="text-cream-100/80 text-base leading-relaxed">
                     Our strawberries undergo rigorous residue and phytosanitary testing by the
                     Egyptian Ministry of Agriculture to verify full compliance with international
                     food safety benchmarks before export.
@@ -230,19 +208,19 @@ const Products = () => {
                       <DialogTrigger asChild>
                         <Button
                           size="lg"
-                          className="rounded-full bg-white text-oasis-950 hover:bg-white/90 px-6 h-11"
+                          className="rounded-[3px] bg-cream-50 text-oasis-900 hover:bg-white px-6 h-11 text-sm font-semibold shadow-none"
                         >
                           <ZoomIn className="h-4 w-4 mr-2" />
                           Inspect Test Certificate
                         </Button>
                       </DialogTrigger>
-                      <DialogContent className="max-w-2xl">
+                      <DialogContent className="max-w-2xl bg-cream-50 border-cream-300">
                         <DialogHeader>
-                          <DialogTitle className="font-serif text-xl">
+                          <DialogTitle className="font-serif text-xl text-oasis-900">
                             Official Test Certificate — Egyptian Ministry of Agriculture
                           </DialogTitle>
                         </DialogHeader>
-                        <div className="mt-2 overflow-hidden rounded-xl border border-border">
+                        <div className="mt-2 overflow-hidden border border-cream-300">
                           <img
                             src="/lovable-uploads/18c523bf-d46c-47a8-99fe-2e5264f91ae6.png"
                             alt="Official Test Certificate from Egyptian Ministry of Agriculture"
@@ -255,7 +233,7 @@ const Products = () => {
                       asChild
                       variant="outline"
                       size="lg"
-                      className="rounded-full bg-white/10 hover:bg-white/20 border-white/25 text-white hover:text-white px-6 h-11"
+                      className="rounded-[3px] bg-transparent hover:bg-white/10 border-white/30 text-white hover:text-white px-6 h-11 text-sm font-semibold"
                     >
                       <Link to="/quality">Quality Standards</Link>
                     </Button>
@@ -263,75 +241,60 @@ const Products = () => {
                 </div>
 
                 <div className="lg:col-span-5 flex justify-center">
-                  <div className="max-w-xs w-full rounded-2xl bg-white p-3 shadow-elevated">
+                  <div className="max-w-xs w-full bg-cream-50 p-3">
                     <img
                       src="/lovable-uploads/18c523bf-d46c-47a8-99fe-2e5264f91ae6.png"
                       alt="Test Certificate from Ministry of Agriculture"
-                      className="w-full h-auto rounded-xl border border-border/60"
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-auto border border-cream-300"
                     />
-                    <p className="text-center text-xs text-muted-foreground mt-3 font-medium">
-                      Egyptian Ministry of Agriculture Test Certificate
-                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Custom Packaging Options */}
+            {/* Packaging Options */}
             <div>
-              <div className="text-center max-w-2xl mx-auto mb-12">
-                <span className="eyebrow text-berry-600 mb-3">
-                  <Package className="h-3.5 w-3.5" />
-                  Export Packaging
-                </span>
-                <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-3">
-                  Custom Packaging Options
-                </h2>
-                <p className="text-muted-foreground text-base md:text-lg">
-                  Multiple formats and private-label options tailored to global retailers,
-                  wholesalers, and distributors.
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-                {packagingOptions.map((option) => (
-                  <div
-                    key={option.name}
-                    className="group rounded-3xl overflow-hidden bg-card border border-border/80 shadow-soft hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 flex flex-col"
-                  >
-                    <div className="overflow-hidden aspect-[4/3] bg-muted">
-                      <img
-                        src={option.image}
-                        alt={option.name}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                    </div>
-                    <div className="p-6 flex-1 flex flex-col">
-                      <span className="text-xs font-semibold uppercase tracking-[0.14em] text-berry-600 mb-1.5">
-                        {option.spec}
-                      </span>
-                      <h3 className="text-xl font-serif font-semibold text-foreground mb-2">
-                        {option.name}
-                      </h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        {option.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="text-center mt-12">
+              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+                <div>
+                  <span className="eyebrow text-berry-600 mb-2">Export Packaging</span>
+                  <h2 className="text-3xl sm:text-4xl font-serif font-bold text-oasis-900">
+                    Custom packaging options.
+                  </h2>
+                </div>
                 <Button
                   asChild
-                  size="lg"
-                  className="rounded-full bg-berry-600 hover:bg-berry-700 text-white px-8 h-12 shadow-berry"
+                  className="rounded-[3px] bg-berry-600 hover:bg-berry-700 text-cream-50 px-6 h-10 text-xs font-semibold self-start sm:self-auto shadow-none"
                 >
                   <Link to="/contact" className="inline-flex items-center gap-2">
-                    Request Custom Packaging Quote
-                    <ArrowRight className="h-4 w-4" />
+                    Request Custom Packaging
+                    <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                 </Button>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-8">
+                {packagingOptions.map((option) => (
+                  <div key={option.name} className="flex flex-col">
+                    <div className="overflow-hidden bg-cream-200 mb-4">
+                      <img
+                        src={option.image}
+                        alt={`${option.name} — ${option.spec}`}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full aspect-[4/3] object-cover"
+                      />
+                    </div>
+                    <span className="eyebrow text-berry-600 mb-1">{option.spec}</span>
+                    <h3 className="text-2xl font-serif font-bold text-oasis-900 mb-2">
+                      {option.name}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {option.description}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

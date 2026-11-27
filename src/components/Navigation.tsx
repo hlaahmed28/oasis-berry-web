@@ -1,92 +1,86 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 
 const navLinks = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
-  { label: "Products", to: "/products" },
-  { label: "Our Farm", to: "/farm" },
+  { label: "Varieties", to: "/products" },
   { label: "Quality", to: "/quality" },
   { label: "Export", to: "/export" },
+  { label: "FAQ", to: "/#faq" },
   { label: "Contact", to: "/contact" },
 ];
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const { pathname } = useLocation();
-
-  const isHome = pathname === "/";
-  const useLightSurface = !isHome || isScrolled || isMenuOpen;
-
-  useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  const { pathname, hash } = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsMenuOpen(false);
-  }, [pathname]);
+  }, [pathname, hash]);
+
+  const handleFaqClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+    if (pathname === "/") {
+      const el = document.getElementById("faq");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+        return;
+      }
+    }
+    navigate("/");
+    setTimeout(() => {
+      document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" });
+    }, 120);
+  };
 
   return (
-    <header
-      className={`${
-        isHome ? "fixed" : "sticky"
-      } top-0 inset-x-0 z-50 transition-all duration-300 ${
-        useLightSurface
-          ? "bg-background/90 backdrop-blur-xl border-b border-border/80 shadow-soft"
-          : "bg-oasis-950/30 backdrop-blur-md border-b border-white/10"
-      }`}
-    >
+    <header className="sticky top-0 inset-x-0 z-50 bg-cream-100/95 backdrop-blur-md border-b border-cream-300/90">
       <div className="container mx-auto">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-[74px]">
           {/* Brand */}
           <Link to="/" className="flex items-center gap-3 group shrink-0">
-            <div className="h-12 w-12 rounded-full bg-white p-0.5 shadow-sm ring-1 ring-black/10 overflow-hidden transition-transform duration-300 group-hover:scale-105">
+            <div className="h-12 w-12 rounded-full bg-white p-0.5 ring-1 ring-cream-400/70 shadow-sm overflow-hidden transition-transform duration-300 group-hover:scale-105">
               <img
                 src="/lovable-uploads/9937b735-6e84-4902-9b1a-9ce2cb363f4f.png"
                 alt="Strawberry Oasis Logo"
                 className="h-full w-full object-contain"
               />
             </div>
-            <div className="flex flex-col leading-none">
-              <span
-                className={`font-serif text-lg font-semibold tracking-tight transition-colors ${
-                  useLightSurface ? "text-foreground" : "text-white"
-                }`}
-              >
-                Strawberry Oasis
-              </span>
-              <span
-                className={`text-[11px] font-medium tracking-[0.14em] uppercase mt-1 transition-colors ${
-                  useLightSurface ? "text-muted-foreground" : "text-white/75"
-                }`}
-              >
-                Egyptian Export
-              </span>
-            </div>
+            <span className="font-serif text-xl font-bold tracking-tight text-oasis-900">
+              Strawberry Oasis
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav aria-label="Primary navigation" className="hidden lg:flex items-center gap-7">
             {navLinks.map((link) => {
-              const isActive = pathname === link.to;
+              const isFaq = link.to === "/#faq";
+              const isActive = !isFaq && pathname === link.to;
+              if (isFaq) {
+                return (
+                  <a
+                    key={link.label}
+                    href="/#faq"
+                    onClick={handleFaqClick}
+                    className="py-1 text-sm font-medium text-oasis-900/75 hover:text-oasis-900 transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                );
+              }
               return (
                 <Link
                   key={link.to}
                   to={link.to}
-                  className={`px-3.5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                  className={`py-1 text-sm transition-colors ${
                     isActive
-                      ? useLightSurface
-                        ? "bg-berry-600/10 text-berry-700 font-semibold"
-                        : "bg-white/20 text-white font-semibold"
-                      : useLightSurface
-                      ? "text-foreground/75 hover:text-foreground hover:bg-muted/80"
-                      : "text-white/80 hover:text-white hover:bg-white/10"
+                      ? "text-oasis-900 font-semibold border-b-2 border-berry-600"
+                      : "text-oasis-900/75 hover:text-oasis-900 font-medium"
                   }`}
                 >
                   {link.label}
@@ -96,14 +90,14 @@ const Navigation = () => {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center">
             <Button
               asChild
-              className="rounded-full bg-berry-600 hover:bg-berry-700 text-white px-5 h-10 shadow-berry transition-all duration-200 hover:-translate-y-0.5"
+              className="rounded-[3px] bg-berry-600 hover:bg-berry-700 text-cream-50 px-5 h-10 text-xs font-semibold tracking-wide shadow-none transition-colors"
             >
-              <Link to="/contact" className="inline-flex items-center gap-1.5">
-                Request Quote
-                <ArrowUpRight className="h-4 w-4" />
+              <Link to="/contact" className="inline-flex items-center gap-2">
+                Request a Quote
+                <ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </Button>
           </div>
@@ -113,11 +107,7 @@ const Navigation = () => {
             variant="ghost"
             size="icon"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            className={`lg:hidden rounded-full ${
-              useLightSurface
-                ? "text-foreground hover:bg-muted"
-                : "text-white hover:bg-white/15 hover:text-white"
-            }`}
+            className="lg:hidden text-oasis-900 hover:bg-cream-200 rounded-[3px]"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -126,32 +116,45 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden pb-6 pt-2 border-t border-border/60 animate-fade-up">
-            <nav className="flex flex-col space-y-1">
+          <div className="lg:hidden pb-6 pt-3 border-t border-cream-300 animate-fade-up">
+            <nav aria-label="Mobile navigation" className="flex flex-col space-y-1">
               {navLinks.map((link) => {
-                const isActive = pathname === link.to;
+                const isFaq = link.to === "/#faq";
+                const isActive = !isFaq && pathname === link.to;
+                if (isFaq) {
+                  return (
+                    <a
+                      key={link.label}
+                      href="/#faq"
+                      onClick={handleFaqClick}
+                      className="px-3 py-2.5 text-base font-medium text-oasis-900/80 hover:bg-cream-200/70 hover:text-oasis-900"
+                    >
+                      {link.label}
+                    </a>
+                  );
+                }
                 return (
                   <Link
                     key={link.to}
                     to={link.to}
-                    className={`px-4 py-3 rounded-xl text-base font-medium transition-colors ${
+                    className={`px-3 py-2.5 text-base transition-colors ${
                       isActive
-                        ? "bg-berry-600/10 text-berry-700 font-semibold"
-                        : "text-foreground/80 hover:bg-muted hover:text-foreground"
+                        ? "text-berry-600 font-semibold bg-cream-200/60"
+                        : "text-oasis-900/80 hover:bg-cream-200/70 hover:text-oasis-900 font-medium"
                     }`}
                   >
                     {link.label}
                   </Link>
                 );
               })}
-              <div className="pt-3 px-1">
+              <div className="pt-3">
                 <Button
                   asChild
-                  className="w-full rounded-full bg-berry-600 hover:bg-berry-700 text-white h-11 shadow-berry"
+                  className="w-full rounded-[3px] bg-berry-600 hover:bg-berry-700 text-cream-50 h-11 font-semibold"
                 >
                   <Link to="/contact" className="inline-flex items-center justify-center gap-2">
-                    Request Export Quote
-                    <ArrowUpRight className="h-4 w-4" />
+                    Request a Quote
+                    <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
               </div>
