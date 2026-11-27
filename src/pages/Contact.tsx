@@ -45,6 +45,11 @@ const Contact = () => {
       const result = await submitContactForm(formData);
 
       if (result.success) {
+        window.gtag?.("event", "generate_lead", {
+          event_category: "contact_form",
+          event_label: formData.country || "unspecified",
+        });
+
         toast({
           title: "Inquiry sent successfully!",
           description: result.message,
