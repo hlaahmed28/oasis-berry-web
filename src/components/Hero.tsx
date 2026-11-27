@@ -5,33 +5,37 @@ import { ArrowRight } from "lucide-react";
 const metaItems = [
   { label: "Harvest season", value: "November — May" },
   { label: "Origin", value: "Egypt" },
-  { label: "Supply", value: "Fresh export" },
+  { label: "Supply", value: "Fresh & Frozen export" },
 ];
 
 const Hero = () => {
   return (
     <section className="relative bg-cream-100 overflow-hidden">
-      {/* Split Editorial Hero */}
+      {/* Full-bleed Hero with Crate Image in Background (Mobile & Desktop) */}
       <div className="relative">
-        {/* Desktop full-bleed hero crate photograph (crate on right, warm linen on left) */}
-        <div className="hidden lg:block absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
           <img
             src="/hero-crate.jpg"
             alt="Wooden harvest crate brimming with fresh glossy Egyptian strawberries"
             fetchPriority="high"
             className="w-full h-full object-cover object-right"
           />
-          {/* Subtle cream tint on the left so headline contrast stays crisp */}
+          {/* Mobile readability veil */}
           <div
             aria-hidden="true"
-            className="absolute inset-y-0 left-0 w-[55%] bg-gradient-to-r from-cream-100/95 via-cream-100/75 to-transparent"
+            className="lg:hidden absolute inset-0 bg-gradient-to-r from-cream-100/90 via-cream-100/75 to-cream-100/35"
+          />
+          {/* Desktop left-side cream feather so crate stays vibrant on the right */}
+          <div
+            aria-hidden="true"
+            className="hidden lg:block absolute inset-y-0 left-0 w-[55%] bg-gradient-to-r from-cream-100/95 via-cream-100/75 to-transparent"
           />
         </div>
 
         <div className="relative container mx-auto">
-          <div className="grid lg:grid-cols-12 items-center min-h-[470px] md:min-h-[540px]">
-            {/* Left Copy */}
-            <div className="lg:col-span-6 py-12 md:py-20 lg:pr-8">
+          <div className="grid lg:grid-cols-12 items-center min-h-[420px] sm:min-h-[470px] md:min-h-[540px]">
+            {/* Editorial Copy */}
+            <div className="lg:col-span-6 py-14 sm:py-16 md:py-20 lg:pr-8">
               <h1 className="text-5xl sm:text-6xl md:text-[74px] font-serif font-bold text-oasis-900 leading-[0.98] tracking-[-0.025em] mb-6">
                 Egyptian
                 <br />
@@ -52,18 +56,6 @@ const Hero = () => {
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
-            </div>
-
-            {/* Mobile / Tablet Hero Crate Image */}
-            <div className="lg:hidden pb-10">
-              <div className="overflow-hidden border border-cream-300">
-                <img
-                  src="/hero-crate.jpg"
-                  alt="Wooden harvest crate brimming with fresh glossy Egyptian strawberries"
-                  fetchPriority="high"
-                  className="w-full aspect-[4/3] object-cover"
-                />
-              </div>
             </div>
           </div>
         </div>

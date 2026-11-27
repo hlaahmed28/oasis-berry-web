@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 export const SITE_URL = "https://strawberryoasis.com";
 export const SITE_NAME = "Strawberry Oasis";
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/lovable-uploads/adfdf2fb-5b20-4bce-af35-2651768c9a60.png`;
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/hero-crate.jpg`;
 
 export interface BreadcrumbItem {
   name: string;

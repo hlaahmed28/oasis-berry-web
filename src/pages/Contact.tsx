@@ -213,7 +213,7 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       className="min-h-[140px] rounded-[3px] bg-cream-100/70 border-cream-300 resize-y"
-                      placeholder="Tell us about your requirements, preferred variety (Festival / Florida Beauty), quantities, packaging, and timeline..."
+                      placeholder="Tell us about your requirements, preferred variety (Fortuna / Brilliance), quantities, packaging, and timeline..."
                       disabled={isSubmitting}
                     />
                   </div>

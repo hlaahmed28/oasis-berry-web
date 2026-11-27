@@ -14,10 +14,10 @@ const breadcrumbs = [
 const qualitySchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Quality Assurance & Certifications — GLOBALG.A.P & ISO 22000",
+  name: "Quality Assurance & Certifications — GLOBALG.A.P, ISO 22000, EU & FDA Compliant",
   url: `${SITE_URL}/quality`,
   description:
-    "GLOBALG.A.P certified, ISO 22000 certified, and EU export compliant Egyptian strawberries backed by four-stage cold-chain quality assurance.",
+    "GLOBALG.A.P certified, ISO 22000 certified, EU export compliant, and FDA compliant fresh and frozen Egyptian strawberries backed by four-stage cold-chain quality assurance.",
 };
 
 const certifications = [
@@ -34,10 +34,16 @@ const certifications = [
       "Full Food Safety Management System certification guaranteeing strict hygiene, hazard control, and traceability across our supply chain.",
   },
   {
-    badge: "Export Readiness",
+    badge: "European Export",
     title: "EU Compliant",
     description:
       "Complete adherence to European Union import standards, MRL residue testing, and phytosanitary clearance documentation.",
+  },
+  {
+    badge: "U.S. Export",
+    title: "FDA Compliant",
+    description:
+      "Compliant with U.S. Food and Drug Administration (FDA) food safety, traceability, and import regulations for fresh and frozen produce.",
   },
 ];
 
@@ -72,10 +78,10 @@ const Quality = () => {
   return (
     <div className="min-h-screen bg-cream-100 overflow-x-hidden flex flex-col">
       <SEO
-        title="Quality & Certifications — GLOBALG.A.P, ISO 22000 & EU Compliant"
-        description="Learn how Strawberry Oasis guarantees safe, residue-tested Egyptian strawberries through GLOBALG.A.P, ISO 22000, EU MRL compliance, and 4-stage cold-chain quality assurance."
+        title="Quality & Certifications — GLOBALG.A.P, ISO 22000, EU & FDA Compliant"
+        description="Learn how Strawberry Oasis guarantees safe, residue-tested fresh and frozen Egyptian strawberries through GLOBALG.A.P, ISO 22000, EU MRL, and FDA compliance."
         path="/quality"
-        keywords="GLOBALG.A.P Egyptian strawberries, ISO 22000 food safety strawberries, EU compliant Egyptian produce, strawberry quality assurance cold chain"
+        keywords="GLOBALG.A.P Egyptian strawberries, ISO 22000 food safety strawberries, EU compliant Egyptian produce, FDA compliant Egyptian strawberries, fresh and frozen strawberry quality assurance"
         breadcrumbs={breadcrumbs}
         structuredData={qualitySchema}
       />
@@ -92,9 +98,9 @@ const Quality = () => {
         {/* Certifications Strip */}
         <section className="bg-oasis-900 text-cream-50 py-14 md:py-16">
           <div className="container mx-auto">
-            <div className="grid md:grid-cols-3 gap-8 md:gap-0 md:divide-x divide-white/20">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x divide-white/20">
               {certifications.map((cert) => (
-                <div key={cert.title} className="md:px-8 first:md:pl-0 last:md:pr-0">
+                <div key={cert.title} className="lg:px-7 first:lg:pl-0 last:lg:pr-0">
                   <span className="eyebrow text-cream-300/75 mb-2">{cert.badge}</span>
                   <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-3">
                     {cert.title}

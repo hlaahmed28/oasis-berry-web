@@ -28,9 +28,9 @@ const productsSchema = {
       position: 1,
       item: {
         "@type": "Product",
-        name: "Festival Strawberries",
+        name: "Fortuna Strawberries",
         description:
-          "Flagship Egyptian export strawberry variety with intense crimson color, glossy finish, sweet flavor, and extended shelf life for international cold-chain transport.",
+          "Flagship Egyptian export strawberry variety with bright glossy crimson color, sweet balanced flavor, firm texture, and extended shelf life for international cold-chain transport.",
         image: `${SITE_URL}/lovable-uploads/bf25374c-4ce7-4f81-b6fb-a50a53ff3bb0.png`,
         brand: { "@type": "Brand", name: "Strawberry Oasis" },
         countryOfOrigin: { "@type": "Country", name: "Egypt" },
@@ -49,9 +49,9 @@ const productsSchema = {
       position: 2,
       item: {
         "@type": "Product",
-        name: "Florida Beauty Strawberries",
+        name: "Brilliance Strawberries",
         description:
-          "Early-harvest Egyptian strawberry variety prized for brilliant red color, uniform berry quality, and fast air-freight delivery to fresh retail markets.",
+          "Early-harvest Egyptian strawberry variety prized for brilliant ruby color, uniform conical shape, firm transport grade, and fast air-freight delivery to fresh retail markets.",
         image: `${SITE_URL}/lovable-uploads/421700b1-f980-46d0-9122-e2acfe70bc4f.png`,
         brand: { "@type": "Brand", name: "Strawberry Oasis" },
         countryOfOrigin: { "@type": "Country", name: "Egypt" },
@@ -70,31 +70,31 @@ const productsSchema = {
 
 const varieties = [
   {
-    name: "Festival Strawberries",
+    name: "Fortuna",
     badge: "Flagship Export Variety",
     image: "/lovable-uploads/bf25374c-4ce7-4f81-b6fb-a50a53ff3bb0.png",
     description:
-      "Juicy, sweet, and firm with an intense crimson color and glossy finish. Extended post-harvest life makes it our flagship choice for long-haul international markets.",
+      "Juicy, sweet, and firm with a bright glossy crimson finish and strong post-harvest life. Our flagship choice for fresh retail, supermarket programs, and long-haul international markets.",
     features: [
-      "Intense red color with glossy finish",
-      "Juicy, sweet flavor profile",
+      "Bright crimson color with glossy finish",
+      "Sweet, balanced flavor profile",
       "Extended shelf life for export",
-      "Large, uniform berry size",
+      "Symmetrical, uniform conical berry size",
       "Excellent firmness for cold-chain transit",
     ],
     fit: "Ideal for international markets demanding premium quality and shelf life.",
   },
   {
-    name: "Florida Beauty",
+    name: "Brilliance",
     badge: "Early Harvest Variety",
     image: "/lovable-uploads/421700b1-f980-46d0-9122-e2acfe70bc4f.png",
     description:
-      "High-yield early-season variety prized for vibrant color, attractive uniform shape, and rapid delivery to fresh retail produce programs.",
+      "High-yield early-season variety prized for brilliant ruby color, attractive uniform conical shape, and rapid delivery to fresh retail produce programs.",
     features: [
       "Early harvest capability starting November",
       "Brilliant uniform ruby coloration",
       "Fast air-freight market delivery",
-      "Consistent grading and berry shape",
+      "Consistent grading and firm berry structure",
       "Crisp texture ideal for fresh consumption",
     ],
     fit: "Ideal for early-season programs and premium retail chains.",
@@ -130,11 +130,11 @@ const Products = () => {
     <div className="min-h-screen bg-cream-100 overflow-x-hidden flex flex-col">
       <SEO
         title="Fresh Strawberry Varieties & Custom Export Packaging"
-        description="Explore Festival and Florida Beauty fresh Egyptian strawberries, official Ministry of Agriculture lab certificates, and custom 250g/500g clamshells & 2kg/5kg export cartons."
+        description="Explore Fortuna and Brilliance fresh Egyptian strawberries, official Ministry of Agriculture lab certificates, and custom 250g/500g clamshells & 2kg/5kg export cartons."
         path="/products"
-        keywords="Festival strawberries Egypt, Florida Beauty strawberries export, strawberry clamshells 250g 500g, export strawberry cartons, private label strawberries Egypt"
+        keywords="Fortuna strawberries Egypt, Brilliance strawberries export, strawberry clamshells 250g 500g, export strawberry cartons, private label strawberries Egypt"
         image="/lovable-uploads/bf25374c-4ce7-4f81-b6fb-a50a53ff3bb0.png"
-        imageAlt="Festival and Florida Beauty fresh Egyptian strawberries for export"
+        imageAlt="Fortuna and Brilliance fresh Egyptian strawberries for export"
         breadcrumbs={breadcrumbs}
         structuredData={productsSchema}
       />

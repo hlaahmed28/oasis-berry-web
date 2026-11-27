@@ -3,16 +3,16 @@ import { ArrowRight } from "lucide-react";
 
 const varieties = [
   {
-    name: "Festival Strawberries",
+    name: "Fortuna",
     image: "/lovable-uploads/bf25374c-4ce7-4f81-b6fb-a50a53ff3bb0.png",
     description:
-      "Juicy, sweet, and firm with excellent color and post-harvest life. A popular choice for fresh retail, export, and long-haul markets.",
+      "Juicy, sweet, and firm with a bright glossy crimson finish and strong post-harvest shelf life. A leading choice for fresh retail, export, and long-haul markets.",
   },
   {
-    name: "Florida Beauty",
+    name: "Brilliance",
     image: "/lovable-uploads/421700b1-f980-46d0-9122-e2acfe70bc4f.png",
     description:
-      "A high-yield variety known for its vibrant color, attractive shape, and consistent quality — ideal for fresh export and premium retail.",
+      "An early-season, high-yield variety prized for its brilliant ruby color, uniform conical shape, and firm texture — ideal for fresh air-freight export and premium retail.",
   },
 ];
 

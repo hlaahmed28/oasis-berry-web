@@ -5,27 +5,27 @@ export const exportFaqs = [
   {
     question: "When is the fresh Egyptian strawberry export season?",
     answer:
-      "Our main export season runs from November through May each year, with early-harvest Florida Beauty strawberries starting in November and peak Festival strawberry volumes shipping weekly from December through April.",
+      "Our main export season runs from November through May each year, with early-harvest Brilliance strawberries starting in November and peak Fortuna strawberry volumes shipping weekly from December through April.",
   },
   {
     question: "Which strawberry varieties does Strawberry Oasis export?",
     answer:
-      "We specialize in two premier export varieties: Festival strawberries (prized for deep crimson color, high sweetness, firmness, and extended shelf life) and Florida Beauty strawberries (known for early-season availability and vibrant glossy appearance).",
+      "We specialize in two premier export varieties: Fortuna strawberries (prized for bright glossy color, sweet balanced flavor, firmness, and extended shelf life) and Brilliance strawberries (known for early-season availability, uniform conical shape, and vibrant ruby appearance).",
   },
   {
     question: "What food safety certifications do your strawberries hold?",
     answer:
-      "Our farms and packing facilities are GLOBALG.A.P and ISO 22000 certified, fully compliant with European Union MRL and phytosanitary regulations, and backed by official Egyptian Ministry of Agriculture laboratory test certificates.",
+      "Our farms and packing facilities are GLOBALG.A.P. and ISO 22000 certified, EU and FDA compliant for fresh and frozen exports, and backed by official Egyptian Ministry of Agriculture laboratory test certificates.",
   },
   {
     question: "What packaging formats and private-label options are available?",
     answer:
-      "We pack to order in retail-ready ventilated clamshells (250g and 500g), export master cartons (2kg and 5kg), and custom bulk crates. Private-label supermarket branding and specialty presentation packaging are available upon request.",
+      "We supply both fresh and frozen exports — packing fresh berries in retail-ready clamshells (250g and 500g) and export master cartons (2kg and 5kg), plus IQF frozen bulk cartons and private-label options upon request.",
   },
   {
-    question: "How do you ship fresh strawberries internationally?",
+    question: "How do you ship fresh and frozen strawberries internationally?",
     answer:
-      "We maintain an unbroken cold chain from forced-air pre-cooling at our packing house to destination arrival, offering express air freight for time-sensitive fresh retail programs and temperature-controlled sea freight for bulk orders across Europe, the UK, the Middle East, and Asia.",
+      "We maintain an unbroken cold chain from forced-air pre-cooling and IQF freezing to destination arrival, offering express air freight for fresh retail programs and temperature-controlled reefer sea freight for fresh and frozen bulk orders across Europe, the UK, North America, the Middle East, and Asia.",
   },
 ];
 

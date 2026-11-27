@@ -13,9 +13,9 @@ const Index = () => {
     <div className="min-h-screen bg-cream-100 overflow-x-hidden flex flex-col">
       <SEO
         title="Strawberry Oasis — Premium Egyptian Strawberries for Global Export"
-        description="Leading Egyptian strawberry grower and exporter. GLOBALG.A.P and ISO 22000 certified Festival and Florida Beauty fresh strawberries shipped worldwide via cold-chain air and sea freight."
+        description="Leading Egyptian strawberry grower and exporter. GLOBALG.A.P, ISO 22000, EU and FDA compliant Fortuna and Brilliance fresh & frozen strawberries shipped worldwide via cold-chain air and sea freight."
         path="/"
-        keywords="Egyptian strawberries export, fresh strawberries Egypt, Festival strawberries exporter, Florida Beauty strawberries, GLOBALG.A.P certified strawberries, ISO 22000 strawberry supplier, wholesale Egyptian strawberries"
+        keywords="Egyptian strawberries export, fresh and frozen strawberries Egypt, IQF strawberries Egypt, Fortuna strawberries exporter, Brilliance strawberries, GLOBALG.A.P certified strawberries, ISO 22000, FDA compliant strawberry supplier, wholesale Egyptian strawberries"
         structuredData={exportFaqJsonLd}
       />
       <Navigation />

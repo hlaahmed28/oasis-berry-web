@@ -9,7 +9,7 @@
       ]
     },
     {
-      "source": "/lovable-uploads/(.*)",
+      "source": "/(lovable-uploads/.*|hero-crate\\.jpg)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]

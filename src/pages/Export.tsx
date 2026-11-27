@@ -14,12 +14,12 @@ const exportServiceSchema = [
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Fresh Egyptian Strawberry International Export",
+    name: "Fresh & Frozen Egyptian Strawberry International Export",
     provider: { "@id": `${SITE_URL}/#organization` },
     serviceType: "Agricultural Produce Export & Cold-Chain Logistics",
-    areaServed: ["Europe", "United Kingdom", "Middle East", "Asia"],
+    areaServed: ["Europe", "United Kingdom", "United States", "Middle East", "Asia"],
     description:
-      "Seasonal export of fresh Festival and Florida Beauty Egyptian strawberries from November to May with retail clamshells, export cartons, and air or sea cold-chain freight.",
+      "Seasonal fresh and year-round frozen export of Fortuna and Brilliance Egyptian strawberries (GLOBALG.A.P, ISO 22000, EU & FDA compliant) with retail clamshells, export cartons, and air or sea cold-chain freight.",
   },
   exportFaqJsonLd,
 ];

@@ -14,7 +14,12 @@ const standards = [
   {
     title: "EU Compliant",
     description:
-      "Fully compliant with European Union market requirements for fresh produce.",
+      "Fully compliant with European Union market requirements for fresh and frozen produce.",
+  },
+  {
+    title: "FDA Compliant",
+    description:
+      "Registered and compliant with U.S. FDA food safety and import regulations.",
   },
 ];
 
@@ -24,7 +29,7 @@ const CertificationsPreview = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-start">
           {/* Left Heading Column */}
-          <div className="lg:col-span-4 lg:pr-4">
+          <div className="lg:col-span-3 lg:pr-4">
             <span className="eyebrow text-cream-300/80 mb-2.5">Our Standards</span>
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white leading-[1.1]">
               Certified excellence you can trust.
@@ -37,10 +42,10 @@ const CertificationsPreview = () => {
             </Link>
           </div>
 
-          {/* 3 Vertical-Ruled Certification Columns */}
-          <div className="lg:col-span-8 grid sm:grid-cols-3 gap-8 sm:gap-0 sm:divide-x divide-white/20">
+          {/* 4 Vertical-Ruled Certification Columns */}
+          <div className="lg:col-span-9 grid sm:grid-cols-2 xl:grid-cols-4 gap-8 xl:gap-0 xl:divide-x divide-white/20">
             {standards.map((item) => (
-              <div key={item.title} className="sm:px-6 first:sm:pl-6 lg:first:pl-8">
+              <div key={item.title} className="xl:px-6 xl:first:pl-8 xl:last:pr-0">
                 <h3 className="text-xl font-serif font-bold text-white mb-2">
                   {item.title}
                 </h3>
